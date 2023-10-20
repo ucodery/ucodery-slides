@@ -2,10 +2,13 @@
   "name": "formalizing-a-language",
   "private": true,
   "scripts": {
-    "build": "slidev build",
+    "build": "slidev build --out ../../dist --base /formalizing-a-language/",
     "dev": "slidev --open",
     "export": "slidev export"
   },
+  "author": "Jeremiah Paige",
+  "license": "CC-BY-NC-SA-4.0",
+  "homepage": "https://slides.ucodery.com/formalizing-a-language",
   "dependencies": {
     "@mrdrogdrog/optional": "^1.2.1",
     "@slidev/cli": "^0.42.5",

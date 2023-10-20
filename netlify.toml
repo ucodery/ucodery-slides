@@ -2,8 +2,8 @@
   NODE_VERSION = "14"
 
 [build]
-  publish = "dist"
-  command = "npm run build"
+  command = "nmp build --worksites"
+  publish = "dist/"
 
 [[redirects]]
   from = "/.well-known/*"

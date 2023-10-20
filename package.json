@@ -1,0 +1,13 @@
+ {
+   "name": "ucodery-slides",
+   "version": "1.0.0",
+   "description": "ucodery public slide decks",
+   "workspaces": [ "slides/*" ],
+   "repository": {
+     "type": "git",
+     "url": "git+https://github.com/ucodery/ucodery-slides.git"
+   },
+   "author": "Jeremiah Paige",
+   "license": "CC-BY-NC-SA-4.0",
+   "homepage": "https://slides.ucodery.com"
+ }
