@@ -2,7 +2,7 @@
   "name": "formalizing-a-language",
   "private": true,
   "scripts": {
-    "build": "slidev build --out ../../dist --base /formalizing-a-language/",
+    "build": "slidev build --out ../../dist/formalizing-a-language/ --base /formalizing-a-language/",
     "dev": "slidev --open",
     "export": "slidev export"
   },

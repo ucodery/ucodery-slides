@@ -1,8 +1,9 @@
 [build.environment]
   NODE_VERSION = "14"
+  NPM_VERSION = "9"
 
 [build]
-  command = "nmp build --worksites"
+  command = "npm run --workspaces build"
   publish = "dist/"
 
 [[redirects]]
