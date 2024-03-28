@@ -12,6 +12,8 @@ class: text-center
 image: https://images.unsplash.com/photo-1515325915697-9279b4f7effc
 ---
 
+<!-- https://images.unsplash.com/photo-1515325915697-9279b4f7effc -->
+
 <p>
 <h1 style="color: #F8F8F0;font-size: 5rem; font-weight: 700;">Formalizing a Language</h1>
 <br/>
@@ -25,12 +27,6 @@ div {
   justify-content: center;
 }
 </style>
-
-<!-- https://images.unsplash.com/photo-1515325915697-9279b4f7effc -->
-
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
 
 ---
 layout: intro
@@ -117,12 +113,6 @@ layout: intro
 - ## Python is read by humans
 - ## Parsed similar to a natural language
 
-<!--
-Code is read more often than it is read
-
- up equals requests dot get https status dot python dot org
--->
-
 <style>
 code {
   font-size: 1.75em;
@@ -137,6 +127,12 @@ code {
     <carbon:logo-mastodon />
   </Item>
 </BarBottom>
+
+<!--
+Code is read more often than it is read
+
+ up equals requests dot get https status dot python dot org
+-->
 
 ---
 layout: intro
@@ -151,10 +147,6 @@ layout: intro
 - ## Python is read by computers
 - ## Parsed into a syntax tree
 
-<!--
-Code is read more often - by whom? computers
--->
-
 <style>
 code {
   font-size: 1.75em;
@@ -169,6 +161,10 @@ code {
     <carbon:logo-mastodon />
   </Item>
 </BarBottom>
+
+<!--
+Code is read more often - by whom? computers
+-->
 
 ---
 layout: center
@@ -280,10 +276,6 @@ code {
 }
 </style>
 
-<!--
-whitespace is not (usually) turned into a token
--->
-
 <BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
   <Item text="@ucodery">
     <carbon:logo-github />
@@ -292,6 +284,10 @@ whitespace is not (usually) turned into a token
     <carbon:logo-mastodon />
   </Item>
 </BarBottom>
+
+<!--
+whitespace is not (usually) turned into a token
+-->
 
 ---
 layout: intro
@@ -321,11 +317,6 @@ python -m ast -m single <(echo 'up = requests.get("https://status.python.org")')
               keywords=[]))
 ```
 
-<!--
-order between tree and line no longer lines up
-parsing tells the computer about precidence
--->
-
 <style>
 code {
   font-size: 1.5em;
@@ -341,6 +332,11 @@ code {
     <carbon:logo-mastodon />
   </Item>
 </BarBottom>
+
+<!--
+order between tree and line no longer lines up
+parsing tells the computer about precidence
+-->
 
 ---
 layout: intro
@@ -366,10 +362,6 @@ python -m dis <(echo 'up = requests.get("https://status.python.org")')
         01011010  STORE_NAME   (up)
 ```
 
-<!--
-order reflects AST bottom-up. not code order
--->
-
 <style>
 code {
   font-size: 1.5em;
@@ -384,6 +376,10 @@ code {
     <carbon:logo-mastodon />
   </Item>
 </BarBottom>
+
+<!--
+order reflects AST bottom-up. not code order
+-->
 
 ---
 layout: intro
@@ -417,12 +413,6 @@ layout: intro
 - ## Builds words into sentences
 - ## Does not have to make sense
 
-<!--
-and so defines what word combos make not-this-language
-build sentences into paragraphs, into essays ...
-a gramatically correct program can crash
--->
-
 <BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
   <Item text="@ucodery">
     <carbon:logo-github />
@@ -431,6 +421,12 @@ a gramatically correct program can crash
     <carbon:logo-mastodon />
   </Item>
 </BarBottom>
+
+<!--
+and so defines what word combos make not-this-language
+build sentences into paragraphs, into essays ...
+a gramatically correct program can crash
+-->
 
 ---
 layout: intro
@@ -526,11 +522,6 @@ layout: intro
 - ## Parsing expression grammar (PEG)
 - ## Packrat parser
 
-<!--
-grammar is the written rules; the parser is the program that fulfills those rules
-PEG is a catagory of grammars. Python's rule implementation is unique
--->
-
 <BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
   <Item text="@ucodery">
     <carbon:logo-github />
@@ -539,6 +530,13 @@ PEG is a catagory of grammars. Python's rule implementation is unique
     <carbon:logo-mastodon />
   </Item>
 </BarBottom>
+
+<!--
+grammar is the written rules; the parser is the program that fulfills those rules
+PEG is a catagory of grammars. Python's rule implementation is unique
+recusive decent parser
+packrat = memoization
+-->
 
 ---
 layout: intro
@@ -562,11 +560,6 @@ layout: intro
 layout: intro
 ---
 
-<!--
-recusive decent parser
-packrat = memoization
--->
-
 # PEG Elements
 
 - ## tokens
@@ -578,10 +571,6 @@ packrat = memoization
     - ```
       rule: definition
       ```
-
-<!--
-definitinos are comprised of tokens, keywords, and other rules
--->
 
 <style>
 code {
@@ -597,6 +586,10 @@ code {
     <carbon:logo-mastodon />
   </Item>
 </BarBottom>
+
+<!--
+definitinos are comprised of tokens, keywords, and other rules
+-->
 
 ---
 layout: intro

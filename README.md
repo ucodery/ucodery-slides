@@ -1,11 +1,17 @@
-# Welcome to [Slidev](https://github.com/slidevjs/slidev)!
+# μcodery's Presentation Decks
 
-To start the slide show:
+Some of the published slides:
 
-- `npm install`
-- `npm run dev`
-- visit http://localhost:3030
+- [Formalizing a Language](https://slides.ucodery.com/formalizing-a-language/)
+- [Intro to Introspection](https://slides.ucodery.com/intro-to-introspection/)
 
-Edit the [slides.md](./slides.md) to see the changes.
+hotkeys to remember:
 
-Learn more about Slidev on [documentations](https://sli.dev/).
+| Key | Action     |
+| --- | ---------- |
+|  O  | overview   |
+|  F  | fullscreen |
+|  G  | go-to      |
+
+To get presenter mode open, duplicate the browser window and insert
+`presenter/` between the talk name and slide number.
