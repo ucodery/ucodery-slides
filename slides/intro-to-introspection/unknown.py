@@ -1,7 +1,7 @@
 import operator
 import typing
 
-Answer = str
+Answer = typing.TypeVar("Answer", bound=str)
 Key = typing.TypeVar("Key")
 unit = lambda l, r: ""
 
@@ -35,12 +35,12 @@ class Unknown(Enigma, Riddle):
 
     def __init__(self):
         super().__init__()
-        self.hint = "Call me but I won't respond to those that don't know me"
+        import operator
+        self.hint = "Call me maybe"
         self.machine = operator.getitem
 
-    def __dir__(self):
-        """All you need to know about"""
-        return ['hint']
+    def __bool__(self):
+        return False
 
     def __call__(
         self, locked: bool = True, message: str = "", key: Key = None,
@@ -50,15 +50,20 @@ class Unknown(Enigma, Riddle):
             return
         return machine(message, key)
 
-    def __bool__(self):
-        return False
+    def __dir__(self):
+        """All you need to know about"""
+        return ['hint']
+
+    def __index__(self):
+        return -1
 
     def __getitem__(self, key):
         import inspect
         if key == self.key:
             return None
-        if inspect.getdoc(key) == inspect.getdoc(self):
-            return 42
+        import operator
+        if operator.index(key) == -1:
+            return "Spanish Inquisition"
         raise IndexError
 
 
