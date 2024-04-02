@@ -69,4 +69,4 @@ class Unknown(Enigma, Riddle):
 
 shy = Unknown()
 
-del operator, typing, unit, Answer, Key, Mystery, Unknown
+del operator, typing, unit, Answer, Enigma, Key, Mystery, Riddle, Unknown

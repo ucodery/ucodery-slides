@@ -100,11 +100,11 @@ image: https://images.unsplash.com/photo-1517239320384-e08ad2c24a3e
  '__builtins__': <module 'builtins' (built-in)>,
  '__doc__': None,
  '__loader__': <_frozen_importlib_external.SourceFileLoader
-                object at 0x101c99ca0>,
+                object at 0x101876390>,
  '__name__': '__main__',
  '__package__': None,
  '__spec__': None,
- 'shy': ⣀⡠⠔⠊⠉⠑⠢⢄⣀⡠⠔⠊⠉⠑⠢}
+ 'shy': ⣀⡠⠔⠊⠉⠑⠢⢄⣀⡠⠔⠊⠉⠑⠢⢄}
 >>> 
 ```
 ```python {*|7|10}
@@ -113,11 +113,11 @@ image: https://images.unsplash.com/photo-1517239320384-e08ad2c24a3e
  '__builtins__': <module 'builtins' (built-in)>,
  '__doc__': None,
  '__loader__': <_frozen_importlib_external.SourceFileLoader
-                object at 0x101c99ca0>,
+                object at 0x101876390>,
  '__name__': '__main__',
  '__package__': None,
  '__spec__': None,
- 'shy': ⣀⡠⠔⠊⠉⠑⠢⢄⣀⡠⠔⠊⠉⠑⠢}
+ 'shy': ⣀⡠⠔⠊⠉⠑⠢⢄⣀⡠⠔⠊⠉⠑⠢⢄}
 >>> 
 ```
 ````
@@ -179,21 +179,21 @@ image: https://images.unsplash.com/photo-1517239320384-e08ad2c24a3e
 >>> dir(shy)
 ['hint']
 >>> shy.hint
-"Call me but I won't respond to those that don't know me"
+'Call me maybe'
 >>> 
 ```
 ```python
 >>> dir(shy)
 ['hint']
 >>> shy.hint
-"Call me but I won't respond to those that don't know me"
+'Call me maybe'
 >>> callable(shy)
 ```
 ```python
 >>> dir(shy)
 ['hint']
 >>> shy.hint
-"Call me but I won't respond to those that don't know me"
+'Call me maybe'
 >>> callable(shy)
 True
 >>> 
@@ -202,7 +202,7 @@ True
 >>> dir(shy)
 ['hint']
 >>> shy.hint
-"Call me but I won't respond to those that don't know me"
+'Call me maybe'
 >>> callable(shy)
 True
 >>> shy()
@@ -211,7 +211,7 @@ True
 >>> dir(shy)
 ['hint']
 >>> shy.hint
-"Call me but I won't respond to those that don't know me"
+'Call me maybe'
 >>> callable(shy)
 True
 >>> shy()
@@ -298,27 +298,75 @@ image: https://images.unsplash.com/photo-1631641551473-fbe46919289d
 ```
 ```python
 >>> inspect.getmembers(shy)
-[('hint', "Call me but I won't respond to those that don't know me")]
+[('hint', 'Call me maybe')]
 >>> 
 ```
 ```python
 >>> inspect.getmembers(shy)
-[('hint', "Call me but I won't respond to those that don't know me")]
+[('hint', 'Call me maybe')]
 >>> inspect.getdoc(shy)
 ```
 ```python
 >>> inspect.getmembers(shy)
-[('hint', "Call me but I won't respond to those that don't know me")]
+[('hint', 'Call me maybe')]
 >>> inspect.getdoc(shy)
 'Some class of unknown purpose.'
 >>> 
 ```
 ```python
 >>> inspect.getmembers(shy)
-[('hint', "Call me but I won't respond to those that don't know me")]
+[('hint', 'Call me maybe')]
 >>> inspect.getdoc(shy)
 'Some class of unknown purpose.'
 >>> inspect.getmembers_static(type(shy))
+```
+```python {*|3,13,2,17,5|8}
+>>> inspect.getmembers_static(type(shy))
+[('__bool__', <function Mystery.__bool__ at 0x101af9bc0>),
+ ('__call__', <function Unknown.__call__ at 0x101af9ee0>),
+ ('__class__', <attribute '__class__' of 'object' objects>),
+ ('__delattr__', <slot wrapper '__delattr__' of 'object' objects>),
+ ('__dict__', <attribute '__dict__' of 'Mystery' objects>),
+ ('__dir__', <function Unknown.__dir__ at 0x101af9f80>),
+ ('__doc__', 'Some class of unknown purpose.'),
+ ('__eq__', <slot wrapper '__eq__' of 'object' objects>),
+ ('__format__', <method '__format__' of 'object' objects>),
+ ('__ge__', <slot wrapper '__ge__' of 'object' objects>),
+ ('__getattribute__', <slot wrapper '__getattribute__' of 'object' objects>),
+ ('__getitem__', <function Enigma.__getitem__ at 0x101af9d00>),
+ ('__getstate__', <method '__getstate__' of 'object' objects>),
+ ('__gt__', <slot wrapper '__gt__' of 'object' objects>),
+ ('__hash__', <slot wrapper '__hash__' of 'object' objects>),
+ ('__index__', <function Riddle.__index__ at 0x101a9fe20>),
+ ('__init__', <function Unknown.__init__ at 0x101af9e40>),
+ ('__init_subclass__', <method '__init_subclass__' of 'object' objects>),
+ ('__le__', <slot wrapper '__le__' of 'object' objects>),
+ ('__lt__', <slot wrapper '__lt__' of 'object' objects>),
+ ('__module__', '__main__'),
+ ('__ne__', <slot wrapper '__ne__' of 'object' objects>),
+ ('__new__', <built-in method __new__ of type object at 0x101340078>),
+ ('__reduce__', <method '__reduce__' of 'object' objects>),
+ ('__reduce_ex__', <method '__reduce_ex__' of 'object' objects>),
+ ('__repr__', <function Mystery.__repr__ at 0x101a9f1a0>),
+ ('__setattr__', <slot wrapper '__setattr__' of 'object' objects>),
+ ('__sizeof__', <method '__sizeof__' of 'object' objects>),
+ ('__str__', <slot wrapper '__str__' of 'object' objects>),
+ ('__subclasshook__', <method '__subclasshook__' of 'object' objects>),
+ ('__weakref__', <attribute '__weakref__' of 'Mystery' objects>),
+ ('key', '2'),
+ ('machine', <built-in function add>),
+ ('message', '4')]
+>>> 
+```
+```python
+>>> [n for n, _ in inspect.getmembers_static(type(shy))]
+['__bool__', '__call__', '__class__', '__delattr__', '__dict__',
+ '__dir__', '__doc__', '__eq__', '__format__', '__ge__',
+ '__getattribute__', '__getitem__', '__getstate__', '__gt__',
+ '__hash__', '__index__', '__init__', '__init_subclass__', '__le__',
+ '__lt__', '__module__', '__ne__', '__new__', '__reduce__',
+ '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__',
+ '__subclasshook__', '__weakref__', 'key', 'machine', 'message']
 ```
 ````
 
@@ -330,60 +378,6 @@ image: https://images.unsplash.com/photo-1631641551473-fbe46919289d
 <!--
 maybe not surprising batteries-included includes an introspection module
 investigate again. Same and more info
--->
-
-
----
-layout: image
-image: https://images.unsplash.com/photo-1631641551473-fbe46919289d
----
-
-```python {*|7|5|2-4}{maxHeight:'450px'}
->>> inspect.getmembers_static(type(shy))[::-1]
-[('message', '4'),
- ('machine', <built-in function add>),
- ('key', '2'),
- ('__weakref__', <attribute '__weakref__' of 'Mystery' objects>),
- ('__subclasshook__', <method '__subclasshook__' of 'object' objects>),
- ('__str__', <slot wrapper '__str__' of 'object' objects>),
- ('__sizeof__', <method '__sizeof__' of 'object' objects>),
- ('__setattr__', <slot wrapper '__setattr__' of 'object' objects>),
- ('__repr__', <function Mystery.__repr__ at 0x1097cbe20>),
- ('__reduce_ex__', <method '__reduce_ex__' of 'object' objects>),
- ('__reduce__', <method '__reduce__' of 'object' objects>),
- ('__new__', <built-in method __new__ of type object at 0x10906f078>),
- ('__ne__', <slot wrapper '__ne__' of 'object' objects>),
- ('__module__', '__main__'),
- ('__lt__', <slot wrapper '__lt__' of 'object' objects>),
- ('__le__', <slot wrapper '__le__' of 'object' objects>),
- ('__init_subclass__', <method '__init_subclass__' of 'object' objects>),
- ('__init__', <function Unknown.__init__ at 0x109829c60>),
- ('__hash__', <slot wrapper '__hash__' of 'object' objects>),
- ('__gt__', <slot wrapper '__gt__' of 'object' objects>),
- ('__getstate__', <method '__getstate__' of 'object' objects>),
- ('__getitem__', <function Unknown.__getitem__ at 0x109829ee0>),
- ('__getattribute__', <slot wrapper '__getattribute__' of 'object' objects>),
- ('__ge__', <slot wrapper '__ge__' of 'object' objects>),
- ('__format__', <method '__format__' of 'object' objects>),
- ('__eq__', <slot wrapper '__eq__' of 'object' objects>),
- ('__doc__', 'Some class of unknown purpose.'),
- ('__dir__', <function Unknown.__dir__ at 0x109829d00>),
- ('__dict__', <attribute '__dict__' of 'Mystery' objects>),
- ('__delattr__', <slot wrapper '__delattr__' of 'object' objects>),
- ('__class__', <attribute '__class__' of 'object' objects>),
- ('__call__', <function Unknown.__call__ at 0x109829da0>),
- ('__bool__', <function Unknown.__bool__ at 0x109829e40>)]
->>> 
-```
-
-<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/intro-to-introspection">
-  <Item text="@ucodery"><carbon:logo-github /></Item>
-  <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
-</BarBottom>
-
-<!--
-I did reverse it
-Identify beyond the immediate type
 -->
 
 ---
@@ -403,35 +397,35 @@ True
 ```python
 >>> inspect.signature(shy)
 <Signature (
-  unlock: bool = False,
+  locked: bool = True,
   message: str = '',
   key: ~Key = None,
-  machine: Callabl[str, ~Key], Optional[str]] =
-    <function <lambda> at 0x102f7ef70>
- ) -> Optional[str]>
+  machine: Callable[[str, ~Key], Optional[~Answer]] =
+    <function <lambda> at 0x101a9f100>
+ ) -> Optional[~Answer]>
 >>> 
 ```
 ```python
 >>> inspect.signature(shy)
 <Signature (
-  unlock: bool = False,
+  locked: bool = True,
   message: str = '',
   key: ~Key = None,
-  machine: Callabl[str, ~Key], Optional[str]] =
-    <function <lambda> at 0x102f7ef70>
- ) -> Optional[str]>
+  machine: Callable[[str, ~Key], Optional[~Answer]] =
+    <function <lambda> at 0x101a9f100>
+ ) -> Optional[~Answer]>
 >>> shy()
 >>> 
 ```
 ```python
 >>> inspect.signature(shy)
 <Signature (
-  unlock: bool = False,
+  locked: bool = True,
   message: str = '',
   key: ~Key = None,
-  machine: Callabl[str, ~Key], Optional[str]] =
-    <function <lambda> at 0x102f7ef70>
- ) -> Optional[str]>
+  machine: Callable[[str, ~Key], Optional[~Answer]] =
+    <function <lambda> at 0x101a9f100>
+ ) -> Optional[~Answer]>
 >>> shy(False)
 ''
 >>> 
@@ -439,25 +433,25 @@ True
 ```python
 >>> inspect.signature(shy)
 <Signature (
-  unlock: bool = False,
+  locked: bool = True,
   message: str = '',
   key: ~Key = None,
-  machine: Callabl[str, ~Key], Optional[str]] =
-    <function <lambda> at 0x102f7ef70>
- ) -> Optional[str]>
->>> shy(False, "hello")
+  machine: Callable[[str, ~Key], Optional[~Answer]] =
+    <function <lambda> at 0x101a9f100>
+ ) -> Optional[~Answer]>
+>>> shy(False, 'hello')
 ''
 >>> 
 ```
 ```python
 >>> inspect.signature(shy)
 <Signature (
-  unlock: bool = False,
+  locked: bool = True,
   message: str = '',
   key: ~Key = None,
-  machine: Callabl[str, ~Key], Optional[str]] =
-    <function <lambda> at 0x102f7ef70>
- ) -> Optional[str]>
+  machine: Callable[[str, ~Key], Optional[~Answer]] =
+    <function <lambda> at 0x101a9f100>
+ ) -> Optional[~Answer]>
 >>> shy(False, shy.message, shy.key, shy.machine)
 'greetings from the unknown'
 >>> 
@@ -569,11 +563,11 @@ image: https://images.unsplash.com/photo-1507707161256-bbcd7fe3359e
  '__builtins__': <module 'builtins' (built-in)>,
  '__doc__': None,
  '__loader__': <_frozen_importlib_external.SourceFileLoader
-                object at 0x101c99ca0>,
+                object at 0x101876390>,
  '__name__': '__main__',
  '__package__': None,
  '__spec__': None,
- 'shy': ⣀⡠⠔⠊⠉⠑⠢⢄⣀⡠⠔⠊⠉⠑⠢}
+ 'shy': ⣀⡠⠔⠊⠉⠑⠢⢄⣀⡠⠔⠊⠉⠑⠢⢄}
 >>> 
 ```
 ```python
@@ -701,11 +695,11 @@ NameError: name '__dict__' is not defined. Did you mean: '__doc__'?
  '__builtins__': <module 'builtins' (built-in)>,
  '__doc__': None,
  '__loader__': <_frozen_importlib_external.SourceFileLoader
-                object at 0x101c99ca0>,
+                object at 0x101876390>,
  '__name__': '__main__',
  '__package__': None,
  '__spec__': None,
- 'shy': ⣀⡠⠔⠊⠉⠑⠢⢄⣀⡠⠔⠊⠉⠑⠢,
+ 'shy': ⣀⡠⠔⠊⠉⠑⠢⢄⣀⡠⠔⠊⠉⠑⠢⢄,
  'sys': <module 'sys' (built-in)>}
 >>> 
 ```
@@ -764,7 +758,7 @@ image: https://images.unsplash.com/photo-1507707161256-bbcd7fe3359e
 ````md magic-move
 ```python
 >>> inspect.getmembers(shy)
-[('hint', "Call me but I won't respond to those that don't know me")]
+[('hint', 'Call me maybe')]
 >>> 
 ```
 ```python
@@ -772,10 +766,10 @@ image: https://images.unsplash.com/photo-1507707161256-bbcd7fe3359e
 ```
 ```python
 >>> shy.__dict__
-{'key': slice(None, None, -1),
- 'message': 'nwonknu eht morf sgniteerg',
- 'hint': "call me but I won't respond to those that don't know me",
- 'machine': <built-in functon getitem>}
+{'hint': 'Call me maybe',
+ 'key': slice(None, None, -1),
+ 'machine': <built-in function getitem>,
+ 'message': 'nwonknu eht morf sgniteerg'}
 >>> 
 ```
 ````
@@ -792,9 +786,6 @@ image: https://images.unsplash.com/photo-1507707161256-bbcd7fe3359e
 
 ````md magic-move
 ```python
->>> inspect.getmembers_static(type(shy))[::-1]
-```
-```python
 >>> [n for n, _ in inspect.getmembers_static(type(shy))]
 ['__bool__', '__call__', '__class__', '__delattr__', '__dict__',
  '__dir__', '__doc__', '__eq__', '__format__', '__ge__',
@@ -806,15 +797,25 @@ image: https://images.unsplash.com/photo-1507707161256-bbcd7fe3359e
 >>> 
 ```
 ```python
->>> shy.__class__.__dict__
+>>> type(shy)
+<class '__main__.Unknown'>
+>>>
+```
+```python
+>>> shy.__class__
+<class '__main__.Unknown'>
+>>>
 ```
 ```python
 >>> shy.__class__.__dict__
-{'__module__': '__main__',
+```
+```python {*|2,3,5}
+>>> shy.__class__.__dict__
+{'__call__': <function Unknown.__call__ at 0x101af9ee0>,
+ '__dir__': <function Unknown.__dir__ at 0x101af9f80>,
  '__doc__': 'Some class of unknown purpose.',
- '__init__': <function Unknown __init__ at 0x104c8dbc0>,
- '__dir__': <function Unknown.__dir__ at 0x104c8dc60>,
- '__call__': <function Unknown.__call__ at 0x104c8dd00>}
+ '__init__': <function Unknown.__init__ at 0x101af9e40>,
+ '__module__': '__main__'}
 >>> 
 ```
 ````
@@ -823,6 +824,8 @@ image: https://images.unsplash.com/photo-1507707161256-bbcd7fe3359e
   <Item text="@ucodery"><carbon:logo-github /></Item>
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
+
+<!-- only methods from Unknown, not the rest of the MRO -->
 
 ---
 layout: image
@@ -849,30 +852,33 @@ image: https://images.unsplash.com/photo-1507707161256-bbcd7fe3359e
 >>> 
 ```
 ```python
->>> [
-  n
-  for cls in shy.__class__.__mro__
-  for n in cls.__dict__.keys()
-]
-['__module__', '__doc__', '__init__', '__dir__', '__call__', '__bool__', '__getitem__',
- '__module__', 'machine', '__init__', '__doc__', '__module__', 'message', '__repr__', 
- '__dict__', '__weakref__', '__doc__', '__module__', 'key', '__init__', '__dict__',
- '__weakref__', '__doc__', '__new__', '__repr__', '__hash__', '__str__', '__getattribute__',
- '__setattr__', '__delattr__', '__lt__', '__le__', '__eq__', '__ne__', '__gt__', '__ge__',
- '__init__', '__reduce_ex__', '__reduce__', '__getstate__', '__subclasshook__',
- '__init_subclass__', '__format__', '__sizeof__', '__dir__', '__class__', '__doc__']
+>>> [n for cls in shy.__class__.__mro__
+     for n in cls.__dict__.keys()]
+['__module__', '__doc__', '__init__', '__call__', '__dir__', '__module__',
+ 'machine', '__init__', '__getitem__', '__doc__', '__module__', 'message',
+ '__repr__', '__bool__', '__dict__', '__weakref__', '__doc__', '__module__',
+ 'key', '__init__', '__index__', '__dict__', '__weakref__', '__doc__',
+ '__new__', '__repr__', '__hash__', '__str__', '__getattribute__',
+ '__setattr__', '__delattr__', '__lt__', '__le__', '__eq__', '__ne__',
+ '__gt__', '__ge__', '__init__', '__getitem__', '__doc__', '__module__',
+ 'message', '__repr__', '__bool__', '__dict__', '__weakref__', '__doc__',
+ '__module__', 'key', '__init__', '__index__', '__dict__', '__weakref__',
+ '__doc__', '__new__', '__repr__', '__hash__', '__str__',
+ '__getattribute__', '__setattr__', '__delattr__', '__lt__', '__le__',
+ '__eq__', '__ne__', '__gt__', '__ge__', '__init__', '__reduce_ex__',
+ '__reduce__', '__getstate__', '__subclasshook__', '__init_subclass__',
+ '__format__', '__sizeof__', '__dir__', '__class__', '__doc__']
 >>> 
 ```
 ```python
->>> sorted({
-  n
-  for cls in shy.__class__.__mro__
-  for n in cls.__dict__.keys()
-})
-['__bool__', '__call__', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__',
- '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__',
- '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__',
- '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__',  '__str__',
+>>> sorted({n for cls in shy.__class__.__mro__
+            for n in cls.__dict__.keys()})
+['__bool__', '__call__', '__class__', '__delattr__', '__dict__',
+ '__dir__', '__doc__', '__eq__', '__format__', '__ge__',
+ '__getattribute__', '__getitem__', '__getstate__', '__gt__',
+ '__hash__', '__index__', '__init__', '__init_subclass__', '__le__',
+ '__lt__', '__module__', '__ne__', '__new__', '__reduce__',
+ '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__',
  '__subclasshook__', '__weakref__', 'key', 'machine', 'message']
 >>> 
 ```
@@ -892,34 +898,34 @@ image: https://images.unsplash.com/photo-1507707161256-bbcd7fe3359e
 ```python
 >>> inspect.signature(shy)
 <Signature (
-  unlock: bool = False,
+  locked: bool = True,
   message: str = '',
   key: ~Key = None,
-  machine: Callabl[str, ~Key], Optional[str]] =
-    <function <lambda> at 0x102f7ef70>
- ) -> Optional[str]>
+  machine: Callable[[str, ~Key], Optional[~Answer]] =
+    <function <lambda> at 0x101a9f100>
+ ) -> Optional[~Answer]>
 >>> 
 ```
 ```python
 >>> inspect.signature(shy)
 <Signature (
-  unlock: bool = False,
+  locked: bool = True,
   message: str = '',
   key: ~Key = None,
-  machine: Callabl[str, ~Key], Optional[str]] =
-    <function <lambda> at 0x102f7ef70>
- ) -> Optional[str]>
+  machine: Callable[[str, ~Key], Optional[~Answer]] =
+    <function <lambda> at 0x101a9f100>
+ ) -> Optional[~Answer]>
 >>> shy.__class__.__call__
 ```
 ```python
 >>> inspect.signature(shy)
 <Signature (
-  unlock: bool = False,
+  locked: bool = True,
   message: str = '',
   key: ~Key = None,
-  machine: Callabl[str, ~Key], Optional[str]] =
-    <function <lambda> at 0x102f7ef70>
- ) -> Optional[str]>
+  machine: Callable[[str, ~Key], Optional[~Answer]] =
+    <function <lambda> at 0x101a9f100>
+ ) -> Optional[~Answer]>
 >>> shy.__class__.__call__
 <function Unknown.__call__ at 0x109271da0>
 >>> 
@@ -927,57 +933,57 @@ image: https://images.unsplash.com/photo-1507707161256-bbcd7fe3359e
 ```python
 >>> inspect.signature(shy)
 <Signature (
-  unlock: bool = False,
+  locked: bool = True,
   message: str = '',
   key: ~Key = None,
-  machine: Callabl[str, ~Key], Optional[str]] =
-    <function <lambda> at 0x102f7ef70>
- ) -> Optional[str]>
+  machine: Callable[[str, ~Key], Optional[~Answer]] =
+    <function <lambda> at 0x101a9f100>
+ ) -> Optional[~Answer]>
 >>> shy.__class__.__call__.__code__
-<code object __call__ at 0x108ff18b0, file "./unknown.py", line 45>
+<code object __call__ at 0x108ff18b0, file "./unknown.py", line 57>
 >>> 
 ```
 ```python
 >>> inspect.signature(shy)
 <Signature (
-  unlock: bool = False,
+  locked: bool = True,
   message: str = '',
   key: ~Key = None,
-  machine: Callabl[str, ~Key], Optional[str]] =
-    <function <lambda> at 0x102f7ef70>
- ) -> Optional[str]>
+  machine: Callable[[str, ~Key], Optional[~Answer]] =
+    <function <lambda> at 0x101a9f100>
+ ) -> Optional[~Answer]>
 >>> shy.__class__.__call__.__code__.co_varnames
-('self', 'unlock', 'message', 'key', 'machine')
+('self', 'locked', 'message', 'key', 'machine')
 >>> 
 ```
 ```python
 >>> inspect.signature(shy)
 <Signature (
-  unlock: bool = False,
+  locked: bool = True,
   message: str = '',
   key: ~Key = None,
-  machine: Callabl[str, ~Key], Optional[str]] =
-    <function <lambda> at 0x102f7ef70>
- ) -> Optional[str]>
+  machine: Callable[[str, ~Key], Optional[~Answer]] =
+    <function <lambda> at 0x101a9f100>
+ ) -> Optional[~Answer]>
 >>> shy.__class__.__call__.__defaults__
-(False, '', None, <function <lambda> at 0x1049c9f80>)
+(True, '', None, <function <lambda> at 0x101a9f100>)
 >>> 
 ```
 ```python
 >>> inspect.signature(shy)
 <Signature (
-  unlock: bool = False,
+  locked: bool = True,
   message: str = '',
   key: ~Key = None,
-  machine: Callabl[str, ~Key], Optional[str]] =
-    <function <lambda> at 0x102f7ef70>
- ) -> Optional[str]>
+  machine: Callable[[str, ~Key], Optional[~Answer]] =
+    <function <lambda> at 0x101a9f100>
+ ) -> Optional[~Answer]>
 >>> shy.__class__.__call__.__annotations__
-{'unlock': <class 'bool'>,
+{'key': ~Key,
+ 'locked': <class 'bool'>,
+ 'machine': typing.Callable[[str, ~Key], typing.Optional[~Answer]],
  'message': <class 'str'>,
- 'key': ~Key,
- 'machine': typing.Callable[[str, ~Key], typing.Optional[str]],
- 'return': typing.Optional[str]}
+ 'return': typing.Optional[~Answer]}
 >>> 
 ```
 ````
@@ -1031,7 +1037,7 @@ True
 >>> shy[0]
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-  File "./unknown.py" line 62, in __getitem__
+  File "./unknown.py" line 44, in __getitem__
     raise IndexError
 IndexError
 >>> 
