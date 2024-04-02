@@ -12,6 +12,9 @@ class Riddle:
         super().__init__()
         self.key = slice(None, None, -1)
 
+    def __index__(self):
+        return -1
+
 
 class Mystery:
     message = "4"
@@ -20,6 +23,9 @@ class Mystery:
         sine = "⣀⡠⠔⠊⠉⠑⠢⢄" * 10  # up to 80 columns
         return sine[:id(self)%80]
 
+    def __bool__(self):
+        return False
+
 
 class Enigma(Mystery):
     machine = operator.add
@@ -27,6 +33,15 @@ class Enigma(Mystery):
     def __init__(self):
         super().__init__()
         self.message = "nwonknu eht morf sgniteerg"
+
+    def __getitem__(self, key):
+        import inspect
+        if key == self.key:
+            return None
+        import operator
+        if operator.index(key) == -1:
+            return "Spanish Inquisition"
+        raise IndexError
 
 
 # A riddle wrapped in a mystery inside an enigma.
@@ -39,9 +54,6 @@ class Unknown(Enigma, Riddle):
         self.hint = "Call me maybe"
         self.machine = operator.getitem
 
-    def __bool__(self):
-        return False
-
     def __call__(
         self, locked: bool = True, message: str = "", key: Key = None,
         machine: typing.Callable[[str, Key], typing.Union[Answer, None]] = unit
@@ -53,18 +65,6 @@ class Unknown(Enigma, Riddle):
     def __dir__(self):
         """All you need to know about"""
         return ['hint']
-
-    def __index__(self):
-        return -1
-
-    def __getitem__(self, key):
-        import inspect
-        if key == self.key:
-            return None
-        import operator
-        if operator.index(key) == -1:
-            return "Spanish Inquisition"
-        raise IndexError
 
 
 shy = Unknown()

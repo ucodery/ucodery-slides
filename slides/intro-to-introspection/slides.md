@@ -27,21 +27,9 @@ div {
 }
 </style>
 
----
-layout: image
-image: https://images.unsplash.com/photo-1600201319330-e99245e614c5
----
-
-# Introspection
-## Exploring your code at runtime
-
-<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/intro-to-introspection">
-  <Item text="@ucodery"><carbon:logo-github /></Item>
-  <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
-</BarBottom>
-
 <!--
 asked "what is introspection?"
+exploring code at runtime
 simply: asking questions and getting answers about running code
 -->
 
@@ -50,10 +38,28 @@ layout: image
 image: https://images.unsplash.com/photo-1600201319330-e99245e614c5
 ---
 
-# Essential Questions
-## What's available
-## What is it
-## What does it have
+<div class="grid grid-cols-2 w-full h-full auto-rows-fr">
+  <div class="slidev-layout repadh1">
+    <h1>Essential Questions</h1>
+  </div>
+  <div class="slidev-layout ii-content repadh2 default slidev-page" style="background-color: rgb(24 20 18 / 92%)">
+    <h2>What's Available</h2>
+    <h2>What Is It</h2>
+    <h2>What Does It Have</h2>
+  </div>
+</div>
+
+<style>
+  .slidev-layout {
+    padding: 0;
+  }
+  .slidev-layout .repadh1 {
+    padding: 3rem;
+  }
+  .slidev-layout .repadh2 {
+    padding: 2.5rem;
+  }
+</style>
 
 <BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/intro-to-introspection">
   <Item text="@ucodery"><carbon:logo-github /></Item>
@@ -69,13 +75,6 @@ image: https://images.unsplash.com/photo-1517239320384-e08ad2c24a3e
 
 # In a Strange Environment
 
-<br/>
-<v-click>
-```python
->>> 
-```
-</v-click>
-
 <BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/intro-to-introspection">
   <Item text="@ucodery"><carbon:logo-github /></Item>
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
@@ -90,9 +89,12 @@ image: https://images.unsplash.com/photo-1517239320384-e08ad2c24a3e
 
 ````md magic-move
 ```python
+>>> 
+```
+```python
 >>> locals()
 ```
-```python {*|7|10}
+```python
 >>> locals()
 {'__annotations__': {},
  '__builtins__': <module 'builtins' (built-in)>,
@@ -105,7 +107,7 @@ image: https://images.unsplash.com/photo-1517239320384-e08ad2c24a3e
  'shy': ⣀⡠⠔⠊⠉⠑⠢⢄⣀⡠⠔⠊⠉⠑⠢}
 >>> 
 ```
-```python {*} {at:4}
+```python {*|7|10}
 >>> globals()
 {'__annotations__': {},
  '__builtins__': <module 'builtins' (built-in)>,
@@ -222,7 +224,10 @@ True
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
 
-<!-- investigate -->
+<!--
+investigate
+TypeError: 'int' object is not callable
+-->
 
 ---
 layout: image
@@ -276,6 +281,7 @@ image: https://images.unsplash.com/photo-1631641551473-fbe46919289d
 </BarBottom>
 
 <!--
+batteries-included includes introspection
 Identify beyond the immediate type
 -->
 
@@ -313,26 +319,6 @@ image: https://images.unsplash.com/photo-1631641551473-fbe46919289d
 >>> inspect.getdoc(shy)
 'Some class of unknown purpose.'
 >>> inspect.getmembers_static(type(shy))
-```
-```python
->>> inspect.getmembers_static(type(shy))[::-1]
-[('message', '4'), ('machine', <built-in function add>), ('key', '2'),
- ('__weakref__', <attribute '__weakref__' of 'Mystery' objects>), ('__subclasshook__', <method '__subclasshook__' of 'object' objects>),
- ('__str__', <slot wrapper '__str__' of 'object' objects>), ('__sizeof__', <method '__sizeof__' of 'object' objects>),
- ('__setattr__', <slot wrapper '__setattr__' of 'object' objects>), ('__repr__', <function Mystery.__repr__ at 0x1097cbe20>),
- ('__reduce_ex__', <method '__reduce_ex__' of 'object' objects>), ('__reduce__', <method '__reduce__' of 'object' objects>),
- ('__new__', <built-in method __new__ of type object at 0x10906f078>), ('__ne__', <slot wrapper '__ne__' of 'object' objects>),
- ('__module__', '__main__'), ('__lt__', <slot wrapper '__lt__' of 'object' objects>),
- ('__le__', <slot wrapper '__le__' of 'object' objects>), ('__init_subclass__', <method '__init_subclass__' of 'object' objects>),
- ('__init__', <function Unknown.__init__ at 0x109829c60>), ('__hash__', <slot wrapper '__hash__' of 'object' objects>),
- ('__gt__', <slot wrapper '__gt__' of 'object' objects>), ('__getstate__', <method '__getstate__' of 'object' objects>),
- ('__getitem__', <function Unknown.__getitem__ at 0x109829ee0>), ('__getattribute__', <slot wrapper '__getattribute__' of 'object' objects>),
- ('__ge__', <slot wrapper '__ge__' of 'object' objects>), ('__format__', <method '__format__' of 'object' objects>),
- ('__eq__', <slot wrapper '__eq__' of 'object' objects>), ('__doc__', 'Some class of unknown purpose.'),
- ('__dir__', <function Unknown.__dir__ at 0x109829d00>), ('__dict__', <attribute '__dict__' of 'Mystery' objects>),
- ('__delattr__', <slot wrapper '__delattr__' of 'object' objects>), ('__class__', <attribute '__class__' of 'object' objects>),
- ('__call__', <function Unknown.__call__ at 0x109829da0>), ('__bool__', <function Unknown.__bool__ at 0x109829e40>)]
->>> 
 ```
 ````
 
@@ -396,6 +382,7 @@ image: https://images.unsplash.com/photo-1631641551473-fbe46919289d
 </BarBottom>
 
 <!--
+I did reverse it
 Identify beyond the immediate type
 -->
 
@@ -482,6 +469,8 @@ True
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
 
+<!-- signagure is a super power -->
+
 ---
 layout: image
 image: https://images.unsplash.com/photo-1507707161256-bbcd7fe3359e
@@ -501,27 +490,67 @@ layout: image
 image: https://images.unsplash.com/photo-1507707161256-bbcd7fe3359e
 ---
 
-# Introspection Axioms
-## Names Resolve from Inner- to Outer-Most Scope
-## Everything is an Object
-## Attribute Lookup is Based on Inheritance
+<div class="grid grid-cols-2 w-full h-full auto-rows-fr">
+  <div class="slidev-layout repadh1">
+    <h1>Introspection Axioms</h1>
+  </div>
+  <div class="slidev-layout ii-content repadh2 default slidev-page" style="background-color: rgb(65 25 19 / 92%)">
+    <h2>Names Resolve Inner- to Outer-Most Scope</h2>
+    <h2>Everything Is an Object</h2>
+    <h2>Attribute Lookup Is Based on Inheritance</h2>
+  </div>
+</div>
+
+<style>
+  .slidev-layout {
+    padding: 0;
+  }
+  .slidev-layout .repadh1 {
+    padding: 3rem;
+  }
+  .slidev-layout .repadh2 {
+    padding: 2.5rem;
+  }
+</style>
 
 <BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/intro-to-introspection">
   <Item text="@ucodery"><carbon:logo-github /></Item>
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
 
+<!-- will allow you to ask good questions about your code -->
+
 ---
 layout: image
 image: https://images.unsplash.com/photo-1507707161256-bbcd7fe3359e
 ---
 
-# Scope Resolution
-## Names are Resolved in LEGB Order
-- <u><b>L</b></u>ocal
-- <u><b>E</b></u>nclosing
-- <u><b>G</b></u>lobal
-- <u><b>B</b></u>uiltin
+<div class="grid grid-cols-2 w-full h-full auto-rows-fr">
+  <div class="slidev-layout repadh1">
+    <h1>Scope Resolution</h1>
+  </div>
+  <div class="slidev-layout ii-content repadh2 default slidev-page" style="background-color: rgb(65 25 19 / 92%)">
+    <h2>Names Resolve in LEGB Order</h2>
+    <ul>
+      <li><u><b>L</b></u>ocal</li>
+      <li><u><b>E</b></u>nclosing</li>
+      <li><u><b>G</b></u>lobal</li>
+      <li><u><b>B</b></u>uiltin</li>
+    </ul>
+  </div>
+</div>
+
+<style>
+  .slidev-layout {
+    padding: 0;
+  }
+  .slidev-layout .repadh1 {
+    padding: 3rem;
+  }
+  .slidev-layout .repadh2 {
+    padding: 2.5rem;
+  }
+</style>
 
 <BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/intro-to-introspection">
   <Item text="@ucodery"><carbon:logo-github /></Item>
@@ -579,11 +608,29 @@ layout: image
 image: https://images.unsplash.com/photo-1507707161256-bbcd7fe3359e
 ---
 
-# Everything is an Object
-## Objects Contain Attributes
-## Attribute retrieval is really a dict lookup
-## Special Info Kept in Special Attributes
-- [docs.python.org/reference/datamodel](https://docs.python.org/3/reference/datamodel.html)
+<div class="grid grid-cols-2 w-full h-full auto-rows-fr">
+  <div class="slidev-layout repadh1">
+    <h1>Everything Is an Object</h1>
+  </div>
+  <div class="slidev-layout ii-content repadh2 default slidev-page" style="background-color: rgb(65 25 19 / 92%)">
+    <h2>Objects Have Attributes</h2>
+    <h2>Attributes Are Kept in a Dictionary</h2>
+    <h2>Special Info Kept in Special Attributes</h2>
+    <ul><li><a href="https://docs.python.org/3/reference/datamodel.html" style="text-decoration:none">Data Model</a></li></ul>
+  </div>
+</div>
+
+<style>
+  .slidev-layout {
+    padding: 0;
+  }
+  .slidev-layout .repadh1 {
+    padding: 3rem;
+  }
+  .slidev-layout .repadh2 {
+    padding: 2.5rem;
+  }
+</style>
 
 <BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/intro-to-introspection">
   <Item text="@ucodery"><carbon:logo-github /></Item>
@@ -603,6 +650,11 @@ image: https://images.unsplash.com/photo-1507707161256-bbcd7fe3359e
 ---
 
 ````md magic-move
+```python
+>>> locals
+<built-in function locals>
+>>> 
+```
 ```python
 >>> __builtins__.locals
 <built-in function locals>
@@ -671,13 +723,33 @@ layout: image
 image: https://images.unsplash.com/photo-1507707161256-bbcd7fe3359e
 ---
 
-# Attribute Lookup
-## Check Current Instance
-## Check Current Class
-## Check All Parent Classes in MRO
-- <u><b>M</b></u>ethod
-- <u><b>R</b></u>esolution
-- <u><b>O</b></u>rder
+<div class="grid grid-cols-2 w-full h-full auto-rows-fr">
+  <div class="slidev-layout repadh1">
+    <h1>Attribute Lookup</h1>
+  </div>
+  <div class="slidev-layout ii-content repadh2 default slidev-page" style="background-color: rgb(65 25 19 / 92%)">
+    <h2>Current Instance</h2>
+    <h2>Current Class</h2>
+    <h2>Parent Classes in MRO</h2>
+      <ul>
+        <li><u><b>M</b></u>ethod</li>
+        <li><u><b>R</b></u>esolution</li>
+        <li><u><b>O</b></u>rder</li>
+      </ul>
+  </div>
+</div>
+
+<style>
+  .slidev-layout {
+    padding: 0;
+  }
+  .slidev-layout .repadh1 {
+    padding: 3rem;
+  }
+  .slidev-layout .repadh2 {
+    padding: 2.5rem;
+  }
+</style>
 
 <BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/intro-to-introspection">
   <Item text="@ucodery"><carbon:logo-github /></Item>
@@ -920,7 +992,7 @@ layout: image
 image: https://images.unsplash.com/photo-1422452098470-722310d3ad74
 ---
 
-# General Introspection
+# Innovative Introspection
 
 <BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/intro-to-introspection">
   <Item text="@ucodery"><carbon:logo-github /></Item>
@@ -978,7 +1050,7 @@ IndexError
 <!--
 not __index__. Important to keep the data-model guide close as you explore on your own
 
-TypeError: 'int' object is not subscriptable
+I guess we're still learning new things about shy
 -->
 
 ---
@@ -986,17 +1058,29 @@ layout: image
 image: https://images.unsplash.com/photo-1422452098470-722310d3ad74
 ---
 
-# Review
-## What's Available
-- LEGB
-## What is it
-- <code style="color: var(--prism-function)">type<span style="color: var(--prism-punctuation)">()</span></code> is the object's <code style="color: var(--prism-property)">\_\_class\_\_</code>
-## What does it have
-- objects' attributes are a dict lookup in <code style="color: var(--prism-property)">\_\_dict\_\_</code>
+<div class="grid grid-cols-2 w-full h-full auto-rows-fr">
+  <div class="slidev-layout repadh1">
+    <h1>Review</h1>
+  </div>
+  <div class="slidev-layout ii-content repadh2 default slidev-page" style="background-color: rgb(134 94 50 / 92%)">
+    <h2>What's Available</h2>
+    <ul><li>LEGB</li></ul>
+    <h2>What Is It</h2>
+    <ul><li><code style="color: var(--prism-function)">type<span style="color: var(--prism-punctuation)">()</span></code> Is the Object's <code style="color: var(--prism-property)">__class__</code></li></ul>
+    <h2>What Does It Have</h2>
+    <ul><li>Attributes in <code style="color: var(--prism-property)">__dict__</code></li></ul>
+  </div>
+</div>
 
 <style>
-  .slidev-layout h2 {
-    margin-top: 0.25em;
+  .slidev-layout {
+    padding: 0;
+  }
+  .slidev-layout .repadh1 {
+    padding: 3rem;
+  }
+  .slidev-layout .repadh2 {
+    padding: 2.5rem;
   }
 </style>
 
@@ -1012,17 +1096,31 @@ layout: image
 image: https://images.unsplash.com/photo-1422452098470-722310d3ad74
 ---
 
-# Review
-## built-in Namespace Contains Introspection Tools
-- <code style="color: var(--prism-function)">help<span style="color: var(--prism-punctuation)">()</span></code> is a super powerful use of introspection
-## Use the <code style="color: var(--prism-foreground)">inspect</code> Module for More Power
-- Access to an Object's Magic Methods
-- Takes Care of MRO and Edge Cases for You
-## Extract Info from an Object with the Data Model
+<div class="grid grid-cols-2 w-full h-full auto-rows-fr">
+  <div class="slidev-layout repadh1">
+    <h1>Review</h1>
+  </div>
+  <div class="slidev-layout ii-content repadh2 default slidev-page" style="background-color: rgb(134 94 50 / 92%)">
+    <h2>Built-In Introspection</h2>
+    <ul><li><code style="color: var(--prism-function)">help<span style="color: var(--prism-punctuation)">()</span></code> Is a Powerful Use of Introspection</li></ul>
+    <h2><code style="color: var(--prism-foreground)">inspect</code> Module</h2>
+    <ul>
+      <li>Access Magic Methods</li>
+      <li>Takes Care of MRO</li>
+    </ul>
+    <h2>Data Model is the Map to an Object's Secrets</h2>
+  </div>
+</div>
 
 <style>
-  .slidev-layout h2 {
-    margin-top: 0.25em;
+  .slidev-layout {
+    padding: 0;
+  }
+  .slidev-layout .repadh1 {
+    padding: 3rem;
+  }
+  .slidev-layout .repadh2 {
+    padding: 2.5rem;
   }
 </style>
 
@@ -1033,6 +1131,7 @@ image: https://images.unsplash.com/photo-1422452098470-722310d3ad74
 
 <!--
 1/5 of builtins can be used for introspection
+`inspect` handles edge cases for you
 Data Model is your map when introspecting. You may know 'magic' or 'dunder'
 -->
 
@@ -1091,10 +1190,16 @@ layout: image
 image: https://images.unsplash.com/photo-1516825295207-81549bdd014c
 ---
 
+````md magic-move
+```python
+>>> shy(shy, type(shy).message, type(shy).key, type(shy).machine)
+```
 ```python
 >>> shy(shy, type(shy).message, type(shy).key, type(shy).machine)
 '42'
+>>> 
 ```
+````
 
 <BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/intro-to-introspection">
   <Item text="@ucodery"><carbon:logo-github /></Item>
@@ -1109,25 +1214,33 @@ image: https://images.unsplash.com/photo-1516825295207-81549bdd014c
 ````md magic-move
 ```python
 >>> shy(shy, shy, shy, shy.machine)
+```
+```python
+>>> shy(shy, shy, shy, shy.machine)
 'Spanish Inquisition'
+>>> 
 ```
 ```python
 >>> shy.machine
 <built-in function getitem>
+>>> 
 ```
 ```python
 >>> shy.machine
 <built-in function getitem>
 >>> inspect.getdoc(shy.machine)
 'Same as a[b].'
+>>> 
 ```
 ```python
 >>> shy(shy, shy, shy, shy.machine)
 'Spanish Inquisition'
+>>> 
 ```
 ```python
 >>> shy[shy]
 'Spanish Inquisition'
+>>> 
 ```
 ````
 
