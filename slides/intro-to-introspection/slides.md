@@ -29,8 +29,10 @@ div {
 
 <!--
 asked "what is introspection?"
+
 exploring code at runtime
-simply: asking questions and getting answers about running code
+
+simply: asking questions and getting answers about running code without source
 -->
 
 ---
@@ -66,7 +68,11 @@ image: https://images.unsplash.com/photo-1600201319330-e99245e614c5
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
 
-<!-- identify; inheritance; composition -->
+<!--
+identify
+fundamental q inheritance
+fundamental = composition
+-->
 
 ---
 layout: image
@@ -80,7 +86,11 @@ image: https://images.unsplash.com/photo-1517239320384-e08ad2c24a3e
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
 
-<!-- how do you explore this new space? -->
+<!--
+how do you explore this new space?
+
+what's the purpose of the program under execution?
+-->
 
 ---
 layout: image
@@ -129,8 +139,8 @@ image: https://images.unsplash.com/photo-1517239320384-e08ad2c24a3e
 
 <!--
 look around: what's there? not much.
-dir() vars() locals() globals()
-if __name__ == '__main__':
+
+if \_\_name\_\_ == '\_\_main\_\_':
 -->
 
 ---
@@ -154,7 +164,11 @@ image: https://images.unsplash.com/photo-1517239320384-e08ad2c24a3e
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
 
-<!-- Identify objects of interest. So it is an instance of a class -->
+<!--
+Identify objects of interest.
+
+So it is an instance of a class
+-->
 
 ---
 layout: image
@@ -226,6 +240,7 @@ True
 
 <!--
 investigate
+
 TypeError: 'int' object is not callable
 -->
 
@@ -233,7 +248,6 @@ TypeError: 'int' object is not callable
 layout: image
 image: https://images.unsplash.com/photo-1631641551473-fbe46919289d
 ---
-<!-- https://images.unsplash.com/photo-1510256506868-484d0db06ee2 -->
 
 # Exploring Deeper
 
@@ -282,6 +296,7 @@ image: https://images.unsplash.com/photo-1631641551473-fbe46919289d
 
 <!--
 batteries-included includes introspection
+
 Identify beyond the immediate type
 -->
 
@@ -376,7 +391,6 @@ image: https://images.unsplash.com/photo-1631641551473-fbe46919289d
 </BarBottom>
 
 <!--
-maybe not surprising batteries-included includes an introspection module
 investigate again. Same and more info
 -->
 
@@ -477,7 +491,11 @@ image: https://images.unsplash.com/photo-1507707161256-bbcd7fe3359e
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
 
-<!-- inspect?.. just some python code -->
+<!--
+inspect?.. just some python code
+
+if we figure out its tricks we can come up with our own
+-->
 
 ---
 layout: image
@@ -550,6 +568,8 @@ image: https://images.unsplash.com/photo-1507707161256-bbcd7fe3359e
   <Item text="@ucodery"><carbon:logo-github /></Item>
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
+
+<!-- Python lexically scoped -->
 
 ---
 layout: image
@@ -632,9 +652,12 @@ image: https://images.unsplash.com/photo-1507707161256-bbcd7fe3359e
 </BarBottom>
 
 <!--
-putting a '.' after a thing is always valid - the lookup might not exist
+putting a '.' after a thing always valid - the lookup might not exist
+
 namespaces are a dicts wearing a mask. syntactic sugar
-all objects (everything) are also namespaces
+
+all objects are also namespaces
+
 Data Model is your map when introspecting. You may know 'magic' or 'dunder'
 -->
 
@@ -709,8 +732,6 @@ NameError: name '__dict__' is not defined. Did you mean: '__doc__'?
   <Item text="@ucodery"><carbon:logo-github /></Item>
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
-
-<!-- https://docs.python.org/3/reference/datamodel.html -->
 
 ---
 layout: image
@@ -993,6 +1014,14 @@ image: https://images.unsplash.com/photo-1507707161256-bbcd7fe3359e
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
 
+<!--
+might think, as I, that inspect.signature is easy
+
+it's all one line in the source
+
+at runtime, scattered throughout the interpreter
+-->
+
 ---
 layout: image
 image: https://images.unsplash.com/photo-1422452098470-722310d3ad74
@@ -1005,7 +1034,11 @@ image: https://images.unsplash.com/photo-1422452098470-722310d3ad74
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
 
-<!-- now we have seen how inspect can shine light on you code, you can take the same approach to answer questions about your code no one else has asked before -->
+<!--
+now we have seen how inspect can shine light on you code
+
+you can take the same approach to answer questions about your code no one else has asked before
+-->
 
 ---
 layout: image
@@ -1054,7 +1087,9 @@ IndexError
 </BarBottom>
 
 <!--
-not __index__. Important to keep the data-model guide close as you explore on your own
+not \_\_index\_\_. keep the data-model guide close as you explore on your own
+
+when calling shy, it's own attributes were the key
 
 I guess we're still learning new things about shy
 -->
@@ -1095,7 +1130,11 @@ image: https://images.unsplash.com/photo-1422452098470-722310d3ad74
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
 
-<!-- 3 core questions to ask of your code -->
+<!--
+3 core questions to ask of your code
+
+and MRO it its lineage
+-->
 
 ---
 layout: image
@@ -1137,8 +1176,8 @@ image: https://images.unsplash.com/photo-1422452098470-722310d3ad74
 
 <!--
 1/5 of builtins can be used for introspection
+
 `inspect` handles edge cases for you
-Data Model is your map when introspecting. You may know 'magic' or 'dunder'
 -->
 
 ---
