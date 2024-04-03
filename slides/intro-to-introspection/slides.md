@@ -63,7 +63,7 @@ image: https://images.unsplash.com/photo-1600201319330-e99245e614c5
   }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/intro-to-introspection">
+<BarBottom  color="#F8F8F0" bg="#131218" title="slides.ucodery.com/intro-to-introspection">
   <Item text="@ucodery"><carbon:logo-github /></Item>
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
@@ -251,7 +251,7 @@ image: https://images.unsplash.com/photo-1631641551473-fbe46919289d
 
 # Exploring Deeper
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/intro-to-introspection">
+<BarBottom  color="#F8F8F0" bg="#271307" title="slides.ucodery.com/intro-to-introspection">
   <Item text="@ucodery"><carbon:logo-github /></Item>
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
@@ -289,7 +289,7 @@ image: https://images.unsplash.com/photo-1631641551473-fbe46919289d
 >>> 
 ```
 ````
-<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/intro-to-introspection">
+<BarBottom  color="#F8F8F0" bg="#271307" title="slides.ucodery.com/intro-to-introspection">
   <Item text="@ucodery"><carbon:logo-github /></Item>
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
@@ -333,40 +333,40 @@ image: https://images.unsplash.com/photo-1631641551473-fbe46919289d
 [('hint', 'Call me maybe')]
 >>> inspect.getdoc(shy)
 'Some class of unknown purpose.'
->>> inspect.getmembers_static(type(shy))
+>>> inspect.getmembers(type(shy))
 ```
 ```python {*|3,13,2,17,5|8}
->>> inspect.getmembers_static(type(shy))
-[('__bool__', <function Mystery.__bool__ at 0x101af9bc0>),
- ('__call__', <function Unknown.__call__ at 0x101af9ee0>),
- ('__class__', <attribute '__class__' of 'object' objects>),
+>>> inspect.getmembers(type(shy))
+[('__bool__', <function Mystery.__bool__ at 0x10d809bc0>),
+ ('__call__', <function Unknown.__call__ at 0x10d809ee0>),
+ ('__class__', <class 'type'>),
  ('__delattr__', <slot wrapper '__delattr__' of 'object' objects>),
- ('__dict__', <attribute '__dict__' of 'Mystery' objects>),
- ('__dir__', <function Unknown.__dir__ at 0x101af9f80>),
+ ('__dict__', {'__call__': <function Unknown.__call__ at 0x10d809ee0>, '__
+ ('__dir__', <function Unknown.__dir__ at 0x10d809f80>),
  ('__doc__', 'Some class of unknown purpose.'),
  ('__eq__', <slot wrapper '__eq__' of 'object' objects>),
  ('__format__', <method '__format__' of 'object' objects>),
  ('__ge__', <slot wrapper '__ge__' of 'object' objects>),
- ('__getattribute__', <slot wrapper '__getattribute__' of 'object' objects>),
- ('__getitem__', <function Enigma.__getitem__ at 0x101af9d00>),
+ ('__getattribute__', <slot wrapper '__getattribute__' of 'object' objects
+ ('__getitem__', <function Enigma.__getitem__ at 0x10d809d00>),
  ('__getstate__', <method '__getstate__' of 'object' objects>),
  ('__gt__', <slot wrapper '__gt__' of 'object' objects>),
  ('__hash__', <slot wrapper '__hash__' of 'object' objects>),
- ('__index__', <function Riddle.__index__ at 0x101a9fe20>),
- ('__init__', <function Unknown.__init__ at 0x101af9e40>),
- ('__init_subclass__', <method '__init_subclass__' of 'object' objects>),
+ ('__index__', <function Riddle.__index__ at 0x10d7afe20>),
+ ('__init__', <function Unknown.__init__ at 0x10d809e40>),
+ ('__init_subclass__', <built-in method __init_subclass__ of type object a
  ('__le__', <slot wrapper '__le__' of 'object' objects>),
  ('__lt__', <slot wrapper '__lt__' of 'object' objects>),
  ('__module__', '__main__'),
  ('__ne__', <slot wrapper '__ne__' of 'object' objects>),
- ('__new__', <built-in method __new__ of type object at 0x101340078>),
+ ('__new__', <built-in method __new__ of type object at 0x10d14f078>),
  ('__reduce__', <method '__reduce__' of 'object' objects>),
  ('__reduce_ex__', <method '__reduce_ex__' of 'object' objects>),
- ('__repr__', <function Mystery.__repr__ at 0x101a9f1a0>),
+ ('__repr__', <function Mystery.__repr__ at 0x10d7af1a0>),
  ('__setattr__', <slot wrapper '__setattr__' of 'object' objects>),
  ('__sizeof__', <method '__sizeof__' of 'object' objects>),
  ('__str__', <slot wrapper '__str__' of 'object' objects>),
- ('__subclasshook__', <method '__subclasshook__' of 'object' objects>),
+ ('__subclasshook__', <built-in method __subclasshook__ of type object at 
  ('__weakref__', <attribute '__weakref__' of 'Mystery' objects>),
  ('key', '2'),
  ('machine', <built-in function add>),
@@ -374,7 +374,7 @@ image: https://images.unsplash.com/photo-1631641551473-fbe46919289d
 >>> 
 ```
 ```python
->>> [n for n, _ in inspect.getmembers_static(type(shy))]
+>>> [n for n, _ in inspect.getmembers(type(shy))]
 ['__bool__', '__call__', '__class__', '__delattr__', '__dict__',
  '__dir__', '__doc__', '__eq__', '__format__', '__ge__',
  '__getattribute__', '__getitem__', '__getstate__', '__gt__',
@@ -385,7 +385,7 @@ image: https://images.unsplash.com/photo-1631641551473-fbe46919289d
 ```
 ````
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/intro-to-introspection">
+<BarBottom  color="#F8F8F0" bg="#271307" title="slides.ucodery.com/intro-to-introspection">
   <Item text="@ucodery"><carbon:logo-github /></Item>
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
@@ -472,7 +472,7 @@ True
 ```
 ````
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/intro-to-introspection">
+<BarBottom  color="#F8F8F0" bg="#271307" title="slides.ucodery.com/intro-to-introspection">
   <Item text="@ucodery"><carbon:logo-github /></Item>
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
@@ -486,7 +486,7 @@ image: https://images.unsplash.com/photo-1507707161256-bbcd7fe3359e
 
 # Striking Out on Your Own
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/intro-to-introspection">
+<BarBottom  color="#F8F8F0" bg="#7A391E" title="slides.ucodery.com/intro-to-introspection">
   <Item text="@ucodery"><carbon:logo-github /></Item>
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
@@ -525,12 +525,16 @@ image: https://images.unsplash.com/photo-1507707161256-bbcd7fe3359e
   }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/intro-to-introspection">
+<BarBottom  color="#F8F8F0" bg="#7A391E" title="slides.ucodery.com/intro-to-introspection">
   <Item text="@ucodery"><carbon:logo-github /></Item>
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
 
-<!-- will allow you to ask good questions about your code -->
+<!--
+no more primitive type
+
+will allow you to ask good questions about your code
+-->
 
 ---
 layout: image
@@ -564,12 +568,16 @@ image: https://images.unsplash.com/photo-1507707161256-bbcd7fe3359e
   }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/intro-to-introspection">
+<BarBottom  color="#F8F8F0" bg="#7A391E" title="slides.ucodery.com/intro-to-introspection">
   <Item text="@ucodery"><carbon:logo-github /></Item>
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
 
-<!-- Python lexically scoped -->
+<!--
+Python lexically scoped
+
+or raise NameError
+-->
 
 ---
 layout: image
@@ -610,7 +618,7 @@ True
 ```
 ````
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/intro-to-introspection">
+<BarBottom  color="#F8F8F0" bg="#7A391E" title="slides.ucodery.com/intro-to-introspection">
   <Item text="@ucodery"><carbon:logo-github /></Item>
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
@@ -627,6 +635,7 @@ image: https://images.unsplash.com/photo-1507707161256-bbcd7fe3359e
     <h1>Everything Is an Object</h1>
   </div>
   <div class="slidev-layout ii-content repadh2 default slidev-page" style="background-color: rgb(65 25 19 / 92%)">
+    <h2>Objects Have a Type</h2>
     <h2>Objects Have Attributes</h2>
     <h2>Attributes Are Kept in a Dictionary</h2>
     <h2>Special Info Kept in Special Attributes</h2>
@@ -646,15 +655,13 @@ image: https://images.unsplash.com/photo-1507707161256-bbcd7fe3359e
   }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/intro-to-introspection">
+<BarBottom  color="#F8F8F0" bg="#7A391E" title="slides.ucodery.com/intro-to-introspection">
   <Item text="@ucodery"><carbon:logo-github /></Item>
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
 
 <!--
 putting a '.' after a thing always valid - the lookup might not exist
-
-namespaces are a dicts wearing a mask. syntactic sugar
 
 all objects are also namespaces
 
@@ -728,10 +735,18 @@ NameError: name '__dict__' is not defined. Did you mean: '__doc__'?
 ```
 ````
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/intro-to-introspection">
+<BarBottom  color="#F8F8F0" bg="#7A391E" title="slides.ucodery.com/intro-to-introspection">
   <Item text="@ucodery"><carbon:logo-github /></Item>
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
+
+<!--
+namespaces are a dicts wearing a mask. syntactic sugar
+
+all objects are also namespaces
+
+need to do more work than the provided tools
+-->
 
 ---
 layout: image
@@ -766,7 +781,7 @@ image: https://images.unsplash.com/photo-1507707161256-bbcd7fe3359e
   }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/intro-to-introspection">
+<BarBottom  color="#F8F8F0" bg="#7A391E" title="slides.ucodery.com/intro-to-introspection">
   <Item text="@ucodery"><carbon:logo-github /></Item>
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
@@ -795,7 +810,7 @@ image: https://images.unsplash.com/photo-1507707161256-bbcd7fe3359e
 ```
 ````
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/intro-to-introspection">
+<BarBottom  color="#F8F8F0" bg="#7A391E" title="slides.ucodery.com/intro-to-introspection">
   <Item text="@ucodery"><carbon:logo-github /></Item>
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
@@ -807,7 +822,7 @@ image: https://images.unsplash.com/photo-1507707161256-bbcd7fe3359e
 
 ````md magic-move
 ```python
->>> [n for n, _ in inspect.getmembers_static(type(shy))]
+>>> [n for n, _ in inspect.getmembers(type(shy))]
 ['__bool__', '__call__', '__class__', '__delattr__', '__dict__',
  '__dir__', '__doc__', '__eq__', '__format__', '__ge__',
  '__getattribute__', '__getitem__', '__getstate__', '__gt__',
@@ -841,7 +856,7 @@ image: https://images.unsplash.com/photo-1507707161256-bbcd7fe3359e
 ```
 ````
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/intro-to-introspection">
+<BarBottom  color="#F8F8F0" bg="#7A391E" title="slides.ucodery.com/intro-to-introspection">
   <Item text="@ucodery"><carbon:logo-github /></Item>
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
@@ -877,7 +892,7 @@ image: https://images.unsplash.com/photo-1507707161256-bbcd7fe3359e
      for n in cls.__dict__.keys()]
 ['__module__', '__doc__', '__init__', '__call__', '__dir__', '__module__',
  'machine', '__init__', '__getitem__', '__doc__', '__module__', 'message',
- '__repr__', '__bool__', '__dict__', '__weakref__', '__doc__', '__module__',
+ '__repr__', '__bool__', '__dict__', '__weakref__', '__doc__', '__module__
  'key', '__init__', '__index__', '__dict__', '__weakref__', '__doc__',
  '__new__', '__repr__', '__hash__', '__str__', '__getattribute__',
  '__setattr__', '__delattr__', '__lt__', '__le__', '__eq__', '__ne__',
@@ -905,7 +920,7 @@ image: https://images.unsplash.com/photo-1507707161256-bbcd7fe3359e
 ```
 ````
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/intro-to-introspection">
+<BarBottom  color="#F8F8F0" bg="#7A391E" title="slides.ucodery.com/intro-to-introspection">
   <Item text="@ucodery"><carbon:logo-github /></Item>
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
@@ -1009,7 +1024,7 @@ image: https://images.unsplash.com/photo-1507707161256-bbcd7fe3359e
 ```
 ````
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/intro-to-introspection">
+<BarBottom  color="#F8F8F0" bg="#7A391E" title="slides.ucodery.com/intro-to-introspection">
   <Item text="@ucodery"><carbon:logo-github /></Item>
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
@@ -1020,6 +1035,8 @@ might think, as I, that inspect.signature is easy
 it's all one line in the source
 
 at runtime, scattered throughout the interpreter
+
+self - when this deep, workings of python not hidden
 -->
 
 ---
@@ -1029,7 +1046,7 @@ image: https://images.unsplash.com/photo-1422452098470-722310d3ad74
 
 # Innovative Introspection
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/intro-to-introspection">
+<BarBottom  color="#F8F8F0" bg="#9A592E" title="slides.ucodery.com/intro-to-introspection">
   <Item text="@ucodery"><carbon:logo-github /></Item>
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
@@ -1081,7 +1098,7 @@ IndexError
 ```
 ````
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/intro-to-introspection">
+<BarBottom  color="#F8F8F0" bg="#9A592E" title="slides.ucodery.com/intro-to-introspection">
   <Item text="@ucodery"><carbon:logo-github /></Item>
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
@@ -1092,6 +1109,8 @@ not \_\_index\_\_. keep the data-model guide close as you explore on your own
 when calling shy, it's own attributes were the key
 
 I guess we're still learning new things about shy
+
+might not be done with shy, but are done with this talk
 -->
 
 ---
@@ -1125,12 +1144,14 @@ image: https://images.unsplash.com/photo-1422452098470-722310d3ad74
   }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/intro-to-introspection">
+<BarBottom  color="#F8F8F0" bg="#9A592E" title="slides.ucodery.com/intro-to-introspection">
   <Item text="@ucodery"><carbon:logo-github /></Item>
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
 
 <!--
+might not be done with shy, but are done with this talk
+
 3 core questions to ask of your code
 
 and MRO it its lineage
@@ -1169,7 +1190,7 @@ image: https://images.unsplash.com/photo-1422452098470-722310d3ad74
   }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/intro-to-introspection">
+<BarBottom  color="#F8F8F0" bg="#9A592E" title="slides.ucodery.com/intro-to-introspection">
   <Item text="@ucodery"><carbon:logo-github /></Item>
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
@@ -1200,7 +1221,7 @@ div {
 }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/intro-to-introspection">
+<BarBottom  color="#F8F8F0" bg="#9A592E" title="slides.ucodery.com/intro-to-introspection">
   <Item text="@ucodery"><carbon:logo-github /></Item>
   <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
 </BarBottom>
