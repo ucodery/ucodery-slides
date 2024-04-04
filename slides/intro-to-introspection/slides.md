@@ -297,6 +297,8 @@ image: https://images.unsplash.com/photo-1631641551473-fbe46919289d
 <!--
 batteries-included includes introspection
 
+before we had inspect..
+
 Identify beyond the immediate type
 -->
 
@@ -333,6 +335,26 @@ image: https://images.unsplash.com/photo-1631641551473-fbe46919289d
 [('hint', 'Call me maybe')]
 >>> inspect.getdoc(shy)
 'Some class of unknown purpose.'
+>>> inspect.getmodule(shy)
+```
+```python
+>>> inspect.getmembers(shy)
+[('hint', 'Call me maybe')]
+>>> inspect.getdoc(shy)
+'Some class of unknown purpose.'
+>>> inspect.getmodule(shy)
+<module '__main__' (<_frozen_importlib_external.SourceFileLoader
+                    object at 0x104c2e390>)>
+>>> 
+```
+```python
+>>> inspect.getmembers(shy)
+[('hint', 'Call me maybe')]
+>>> inspect.getdoc(shy)
+'Some class of unknown purpose.'
+>>> inspect.getmodule(shy)
+<module '__main__' (<_frozen_importlib_external.SourceFileLoader
+                    object at 0x104c2e390>)>
 >>> inspect.getmembers(type(shy))
 ```
 ```python {*|3,13,2,17,5|8}
@@ -391,6 +413,8 @@ image: https://images.unsplash.com/photo-1631641551473-fbe46919289d
 </BarBottom>
 
 <!--
+before we had inspect..
+
 investigate again. Same and more info
 -->
 
@@ -661,9 +685,13 @@ image: https://images.unsplash.com/photo-1507707161256-bbcd7fe3359e
 </BarBottom>
 
 <!--
+what is it? what does it have? always valid, has an answer
+
 putting a '.' after a thing always valid - the lookup might not exist
 
 all objects are also namespaces
+
+attrs are where interpreter keeps info about running code too
 
 Data Model is your map when introspecting. You may know 'magic' or 'dunder'
 -->
