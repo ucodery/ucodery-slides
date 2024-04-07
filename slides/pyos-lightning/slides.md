@@ -40,16 +40,13 @@ image: https://github.com/pyOpenSci/pyopensci.github.io/blob/main/images/softwar
 
 <div style="position: absolute; top: 30%; left: 45%;">
   <h2>package code review by pyOS editors</h2>
-  <br/>
-  <br/>
-  <h2>PyOS reviews accepted by JOSS</h2>
-  <br/>
-  <br/>
   <h2>new reviewer mentorship program</h2>
+  <h2>pyOS reviews accepted by JOSS</h2>
 </div>
 
 <style>
   h2 {
+      margin-bottom: 1em;
       color: #421855;
   }
 </style>
@@ -62,6 +59,12 @@ url: https://www.pyopensci.org/software-peer-review/
 # [pyopensci.org/ software-peer-review](https://www.pyopensci.org/software-peer-review/)
 
 <img src="/images/software-peer-review.svg" >
+
+<style>
+  h1 {
+      line-height: 1.5em;
+  }
+</style>
 
 ---
 layout: image
@@ -96,30 +99,22 @@ image: https://github.com/pyOpenSci/pyopensci.github.io/blob/main/images/pyopens
 backgroundSize: contain
 ---
 
-  <br/>
-  <br/>
+<h2><img src="/images/favicon.ico" class="slidev-icon" width="30em" height="30em"> <a href="https://www.pyopensci.org">pyopensci.org</a></h2>
 
-## [pyopensci.org](https://www.pyopensci.org)
+<h2><img src="/images/discourse.svg" class="slidev-icon" width="30em" height="30em"> <a href="https://pyopensci.discourse.group">pyopensci.discourse.group</a></h2>
 
-  <br/>
-  <br/>
+<h2><carbon:logo-github color=#111 /> <a href="https://github.com/pyOpenSci">github.com/pyOpenSci</a></h2>
 
-## [pyopensci.discourse.group](https://pyopensci.discourse.group)
+<h2><carbon:logo-mastodon /> <a href="https://fosstodon.org/@pyOpenSci">@pyOpenSci@fosstodon.org</a></h2>
 
-  <br/>
-  <br/>
-
-## [github.com/pyOpenSci](https://github.com/pyOpenSci)
-
-  <br/>
-  <br/>
-
-## questions, comments, contributions welcome
+<h2>Questions, Comments, Contributions Welcome</h2>
 
 <style>
   h2 {
+      font-size: 1.4em;
       color: #421855;
+      margin-top: 1.5em;
   }
 </style>
 
-<!-- even if you can't or don't want to sprint, drop by any of our virtual spaces to connect and learn -->
+<!-- even if you can't or sprint something else or don't want to sprint, drop by any of our virtual spaces to connect and learn -->
