@@ -1,0 +1,19 @@
+{
+  "name": "pyos-lightning",
+  "private": true,
+  "scripts": {
+    "build": "slidev build --out ../../dist/pyos-lightning/ --base /pyos-lightning/",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "author": "Jeremiah Paige",
+  "license": "CC-BY-NC-SA-4.0",
+  "homepage": "https://slides.ucodery.com/pyos-lightning",
+  "dependencies": {
+    "@mrdrogdrog/optional": "^1.2.1",
+    "@slidev/cli": "^0.48.0",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest",
+    "slidev-theme-purplin": "^1.2.0"
+  }
+}
