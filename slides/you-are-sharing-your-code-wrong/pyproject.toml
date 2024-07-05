@@ -1,0 +1,8 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+[project]
+name = "metuirology"
+version = "1"
+requires-python = ">=3.8"
+dependencies = ["urllib3==2.2.*", "geopy==2.4.*"]

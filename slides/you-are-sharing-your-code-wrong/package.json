@@ -1,0 +1,17 @@
+{
+  "name": "you-are-sharing-your-code-wrong",
+  "private": true,
+  "scripts": {
+    "build": "slidev build --out ../../dist/you-are-sharing-your-code-wrong/ --base /you-are-sharing-your-code-wrong/",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "author": "Jeremiah Paige",
+  "license": "CC-BY-NC-SA-4.0",
+  "homepage": "https://slides.ucodery.com/you-are-sharing-your-code-wrong",
+  "dependencies": {
+    "@mrdrogdrog/optional": "^1.2.1",
+    "@slidev/cli": "^0.48.9",
+    "@slidev/theme-default": "^0.25.0"
+  }
+}
