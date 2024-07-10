@@ -15,8 +15,7 @@ image: /images/cardboard-title.jpg
 ---
 <!-- https://www.flickr.com/photos/27215653@N00/3638034382 -->
 
-<img src="/images/cardboard-title.jpg" style="position: absolute; left: 1px; top: 1px;">
-<img src="/images/cardboard.jpg" style="position: absolute; left: 1px; top: 1px;">
+<img src="/images/cardboard-title.jpg" style="display: none; position: absolute; left: 0px; top: 0px; width: 1px; height: 1px;">
 <img src="/images/this-side-up.png" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:25%;">
 
 # You Are Sharing Your Code Wrong
