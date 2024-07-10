@@ -9,13 +9,11 @@ drawings:
   persist: false
 transition: slide-left
 title: You Are Sharing Your Code Wrong
-layout: image
+layout: default
 class: text-center
-image: /images/cardboard-title.jpg
 ---
 <!-- https://www.flickr.com/photos/27215653@N00/3638034382 -->
 
-<img src="/images/cardboard-title.jpg" style="position: absolute; left: 0px; top: -7%;">
 <img src="/images/this-side-up.png" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:25%;">
 
 # You Are Sharing Your Code Wrong
@@ -25,6 +23,11 @@ image: /images/cardboard-title.jpg
   h2 {
     position: relative;
     top: 35%;
+  }
+  .slidev-page {
+    background-image: url("/images/cardboard-title.jpg");
+    background-size: cover;
+    background-position: -10%;
   }
 </style>
 
@@ -37,15 +40,21 @@ don't worry, before we leave this talk a better way will be shown
 -->
 
 ---
-layout: image
-image: /images/cardboard-title.jpg
+layout: default
 class: text-center
 ---
 
-<img src="/images/cardboard-title.jpg" style="position: absolute; left: 0px; top: -7%;">
 <img src="/images/to-label.jpg" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:25%;">
 
 # If you write code, you share code
+
+<style>
+  .slidev-page {
+    background-image: url("/images/cardboard-title.jpg");
+    background-size: cover;
+    background-position: -10%;
+  }
+</style>
 
 <!--
 another bold assertion
@@ -77,11 +86,8 @@ layout: default
 </style>
 
 ---
-layout: image
-image: /images/cardboard.jpg
+layout: default
 ---
-
-<img src="/images/cardboard.jpg" style="position: absolute; left: 0px; top: -7%;">
 
 ## If you ...
 
@@ -103,18 +109,31 @@ deploy: including `cp`
 convinced yet?
 -->
 
+<style>
+  .slidev-page {
+    background-image: url("/images/cardboard.jpg");
+    background-size: cover;
+  }
+</style>
+
 ---
-layout: image
-image: /images/cardboard-title.jpg
+layout: default
 class: text-center
 ---
 
-<img src="/images/cardboard-title.jpg" style="position: absolute; left: 0px; top: -7%;">
 <img src="/images/czech-stamp.png" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:15%;">
 <img src="/images/czech-stamp.png" style="position: absolute; left: 5.5rem; top: 1.5rem; max-height:15%;">
 <img src="/images/dec-black-mark.png" style="position: absolute; left: 2rem; top: 2.5rem; max-height:12%;">
 
 # How do you share your code?
+
+<style>
+  .slidev-page {
+    background-image: url("/images/cardboard-title.jpg");
+    background-size: cover;
+    background-position: -10%;
+  }
+</style>
 
 <!--
 move the carefully crafted code to a harsh new environment
@@ -123,11 +142,8 @@ take the code from "works on my machine" to "works on your machine"
 -->
 
 ---
-layout: image
-image: /images/cardboard.jpg
+layout: default
 ---
-
-<img src="/images/cardboard.jpg" style="position: absolute; left: 0px; top: -7%;">
 
 ````md magic-move
 ```python
@@ -159,6 +175,13 @@ if __name__ == "__main__":
 ```
 ````
 
+<style>
+  .slidev-page {
+    background-image: url("/images/cardboard.jpg");
+    background-size: cover;
+  }
+</style>
+
 <!--
 ## Hand out the literal code
 
@@ -174,8 +197,7 @@ saving a file is not the end of the sharing journey, its only the beginning.
 -->
 
 ---
-layout: image
-image: /images/cardboard.jpg
+layout: default
 ---
 
 ````md magic-move
@@ -189,13 +211,19 @@ $ python -m metuirology
 ```
 ````
 
+<style>
+  .slidev-page {
+    background-image: url("/images/cardboard.jpg");
+    background-size: cover;
+  }
+</style>
+
 <!--
 knowning ABS won't help import
 -->
 
 ---
-layout: image
-image: /images/cardboard.jpg
+layout: default
 ---
 
 ````md magic-move
@@ -227,6 +255,13 @@ image: /images/cardboard.jpg
 
 </div>
 
+<style>
+  .slidev-page {
+    background-image: url("/images/cardboard.jpg");
+    background-size: cover;
+  }
+</style>
+
 <!--
 ## Hand out requirements
 
@@ -244,8 +279,7 @@ user must now unzip.
 -->
 
 ---
-layout: image
-image: /images/cardboard.jpg
+layout: default
 ---
 
 
@@ -265,6 +299,13 @@ $ PYTHONPATH="/path/to/download/metuirology.zip:$PYTHONPATH" python
 
 </v-clicks>
 
+<style>
+  .slidev-page {
+    background-image: url("/images/cardboard.jpg");
+    background-size: cover;
+  }
+</style>
+
 <!--
 being in the dir with .zip doesn't add this for you
 
@@ -274,8 +315,7 @@ I've seen all these strategies before
 -->
 
 ---
-layout: image
-image: /images/cardboard.jpg
+layout: default
 ---
 
 ## Works until it doesn't
@@ -322,6 +362,13 @@ ImportError: attempted relative import beyond top-level package
 ```
 ````
 
+<style>
+  .slidev-page {
+    background-image: url("/images/cardboard.jpg");
+    background-size: cover;
+  }
+</style>
+
 <!--
 failed to put module in PYTHONPATH
 
@@ -345,15 +392,13 @@ trade-offs for your user **because**...
 -->
 
 ---
-layout: image
-image: /images/cardboard-title.jpg
+layout: default
 class: text-center
 transition: view-transition
 ---
 
 # Sharing code is a three step exercise
 
-<img src="/images/cardboard-title.jpg" style="position: absolute; left: 0px; top: -7%;">
 <img src="/images/australia-stamp.png" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:16%;">
 <img src="/images/special.png" style="position: absolute; left: 1rem; top: 1.5rem; max-height:18%;">
 <img src="/images/canada-stamp.png" style="position: absolute; left: 6.25rem; top: 1.5rem; max-height:15%;">
@@ -369,6 +414,11 @@ transition: view-transition
   h2 {
     position: relative;
     top: 35%;
+  }
+  .slidev-page {
+    background-image: url("/images/cardboard-title.jpg");
+    background-size: cover;
+    background-position: -10%;
   }
 </style>
 
@@ -387,14 +437,12 @@ responsible thing to do
 -->
 
 ---
-layout: image
-image: /images/cardboard-title.jpg
+layout: default
 class: text-center
 ---
 
 # Sharing code is a three step exercise
 
-<img src="/images/cardboard-title.jpg" style="position: absolute; left: 0px; top: -7%;">
 <img src="/images/australia-stamp.png" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:16%;">
 <img src="/images/special.png" style="position: absolute; left: 1rem; top: 1.5rem; max-height:18%;">
 <img src="/images/canada-stamp.png" style="position: absolute; left: 6.25rem; top: 1.5rem; max-height:15%;">
@@ -406,6 +454,11 @@ class: text-center
   h2 {
     position: relative;
     top: 35%;
+  }
+  .slidev-page {
+    background-image: url("/images/cardboard-title.jpg");
+    background-size: cover;
+    background-position: -10%;
   }
 </style>
 
@@ -428,19 +481,25 @@ I also will sometimes refer to the entire exercise as packaging
 -->
 
 ---
-layout: image
-image: /images/cardboard-title.jpg
+layout: default
 class: text-center
 transition: view-transition
 ---
 
 # What tool users want is to run `cmd`
 
-<img src="/images/cardboard-title.jpg" style="position: absolute; left: 0px; top: -7%;">
 <img src="/images/australia-stamp.png" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:16%;">
 <img src="/images/special.png" style="position: absolute; left: 1rem; top: 1.5rem; max-height:18%;">
 <img src="/images/canada-stamp.png" style="position: absolute; left: 6.25rem; top: 1.5rem; max-height:15%;">
 <img src="/images/papua-stamp.png" style="position: absolute; left: 11.75rem; top: 1.5rem; max-height:15%;">
+
+<style>
+  .slidev-page {
+    background-image: url("/images/cardboard-title.jpg");
+    background-size: cover;
+    background-position: -10%;
+  }
+</style>
 
 <!--
 don't want to think about any of the means: files, pip, internet, user-sitepackages
@@ -453,18 +512,24 @@ this includes libraries/imports too
 -->
 
 ---
-layout: image
-image: /images/cardboard-title.jpg
+layout: default
 class: text-center
 ---
 
 # What library users want is `import` to work
 
-<img src="/images/cardboard-title.jpg" style="position: absolute; left: 0px; top: -7%;">
 <img src="/images/australia-stamp.png" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:16%;">
 <img src="/images/special.png" style="position: absolute; left: 1rem; top: 1.5rem; max-height:18%;">
 <img src="/images/canada-stamp.png" style="position: absolute; left: 6.25rem; top: 1.5rem; max-height:15%;">
 <img src="/images/papua-stamp.png" style="position: absolute; left: 11.75rem; top: 1.5rem; max-height:15%;">
+
+<style>
+  .slidev-page {
+    background-image: url("/images/cardboard-title.jpg");
+    background-size: cover;
+    background-position: -10%;
+  }
+</style>
 
 <!--
 don't want to think about any of the means: files, pip, internet, user-sitepackages
@@ -477,14 +542,12 @@ this includes libraries/imports too
 -->
 
 ---
-layout: image
-image: /images/cardboard-title.jpg
+layout: default
 class: text-center
 ---
 
 # The best sharing strategy is the one that works the first time every time
 
-<img src="/images/cardboard-title.jpg" style="position: absolute; left: 0px; top: -7%;">
 <img src="/images/australia-stamp.png" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:16%;">
 <img src="/images/special.png" style="position: absolute; left: 1rem; top: 1.5rem; max-height:18%;">
 <img src="/images/canada-stamp.png" style="position: absolute; left: 6.25rem; top: 1.5rem; max-height:15%;">
@@ -494,6 +557,11 @@ class: text-center
   h1 {
     font-size: 3.4rem;
     line-height: 1.4em;
+  }
+  .slidev-page {
+    background-image: url("/images/cardboard-title.jpg");
+    background-size: cover;
+    background-position: -10%;
   }
 </style>
 
@@ -512,8 +580,7 @@ packaging == SW manufacturing line
 -->
 
 ---
-layout: image
-image: /images/cardboard.jpg
+layout: default
 ---
 
 ````md magic-move
@@ -579,11 +646,14 @@ if __name__ == "__main__":
  li {
   line-height: 1.3em;
  }
+  .slidev-page {
+    background-image: url("/images/cardboard.jpg");
+    background-size: cover;
+  }
 </style>
 
 ---
-layout: image
-image: /images/cardboard.jpg
+layout: default
 ---
 
 ```bat
@@ -600,13 +670,19 @@ def weather(session):
     session.run("metuirology.py", *session.posargs)
 ```
 
+<style>
+  .slidev-page {
+    background-image: url("/images/cardboard.jpg");
+    background-size: cover;
+  }
+</style>
+
 <!--
 not a fantasy, reality
 -->
 
 ---
-layout: image
-image: /images/cardboard.jpg
+layout: default
 ---
 
 ## Inline Metadata
@@ -622,6 +698,13 @@ image: /images/cardboard.jpg
 - Tool agnostic packaging standard
 - One file only
 
+<style>
+  .slidev-page {
+    background-image: url("/images/cardboard.jpg");
+    background-size: cover;
+  }
+</style>
+
 <!--
 Very New standard: January 2024 (PEP-723)
 
@@ -635,17 +718,23 @@ here to tell you there is a better way
 -->
 
 ---
-layout: image
-image: /images/cardboard-title.jpg
+layout: default
 class: text-center
 ---
 
-<img src="/images/cardboard-title.jpg" style="position: absolute; left: 0px; top: -7%;">
 <img src="/images/czech-stamp.png" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:15%;">
 <img src="/images/czech-stamp.png" style="position: absolute; left: 5.5rem; top: 1.5rem; max-height:15%;">
 <img src="/images/dec-black-mark.png" style="position: absolute; left: 2rem; top: 2.5rem; max-height:12%;">
 
 # Restructure as a package
+
+<style>
+  .slidev-page {
+    background-image: url("/images/cardboard-title.jpg");
+    background-size: cover;
+    background-position: -10%;
+  }
+</style>
 
 <!--
 we continue to converge on packaging as the best sharing strategy
@@ -656,8 +745,7 @@ requires specific FS layout
 -->
 
 ---
-layout: image
-image: /images/cardboard.jpg
+layout: default
 ---
 
 ## Python project structure
@@ -665,6 +753,13 @@ image: /images/cardboard.jpg
 - All project details specified in `pyproject.toml`
 - Python code in one .py or one directory of .py files
 - Every python directory contains an `__init__.py`
+
+<style>
+  .slidev-page {
+    background-image: url("/images/cardboard.jpg");
+    background-size: cover;
+  }
+</style>
 
 <!--
 .py or dir is co-located with pyproject
@@ -677,8 +772,7 @@ init signals to python that if it is ok to look at/inside this dir when resolvin
 -->
 
 ---
-layout: image
-image: /images/cardboard.jpg
+layout: default
 ---
 
 ````md magic-move
@@ -739,6 +833,13 @@ if __name__ == "__main__":
 ```
 ````
 
+<style>
+  .slidev-page {
+    background-image: url("/images/cardboard.jpg");
+    background-size: cover;
+  }
+</style>
+
 <!--
 build-system is a big choice you **must** make
 
@@ -748,8 +849,7 @@ does bring a lot of impact; just choose one that works
 -->
 
 ---
-layout: image
-image: /images/cardboard.jpg
+layout: default
 ---
 
 ````md magic-move
@@ -793,6 +893,10 @@ image: /images/cardboard.jpg
   h2 {
     text-align: center;
   }
+  .slidev-page {
+    background-image: url("/images/cardboard.jpg");
+    background-size: cover;
+  }
 </style>
 
 <!--
@@ -804,8 +908,7 @@ This has all been prep for packaging/ wrapping
 -->
 
 ---
-layout: image
-image: /images/cardboard.jpg
+layout: default
 ---
 
 ```text
@@ -813,6 +916,13 @@ $ hatch build -t wheel
 ───────────────────── wheel ─────────────────────
 dist/metuirology-1-py3-none-any.whl
 ```
+
+<style>
+  .slidev-page {
+    background-image: url("/images/cardboard.jpg");
+    background-size: cover;
+  }
+</style>
 
 <!--
 time to wrap it all up; wheels
@@ -823,8 +933,7 @@ wheel is a packaging standard; not one tool
 -->
 
 ---
-layout: image
-image: /images/cardboard.jpg
+layout: default
 ---
 
 ## A wheel lets you
@@ -833,6 +942,13 @@ image: /images/cardboard.jpg
 - share a script, a library, or anything
 - publish to a package repository
 
+<style>
+  .slidev-page {
+    background-image: url("/images/cardboard.jpg");
+    background-size: cover;
+  }
+</style>
+
 <!--
 wheels open up possibilities
 
@@ -840,8 +956,7 @@ PyPI is way to deliver 1/2 and have user deliver final mile
 -->
 
 ---
-layout: image
-image: /images/cardboard.jpg
+layout: default
 ---
 
 ## A wheel lets your user
@@ -849,6 +964,13 @@ image: /images/cardboard.jpg
 - install how they want
 - track where a package came from and what it brought
 - re-share without having to re-package
+
+<style>
+  .slidev-page {
+    background-image: url("/images/cardboard.jpg");
+    background-size: cover;
+  }
+</style>
 
 <!--
 don't even have to know what installer is used
@@ -861,17 +983,23 @@ re-share only involves last 2 share steps
 -->
 
 ---
-layout: image
-image: /images/cardboard-title.jpg
+layout: default
 class: text-center
 ---
 
-<img src="/images/cardboard-title.jpg" style="position: absolute; left: 0px; top: -7%;">
 <img src="/images/czech-stamp.png" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:15%;">
 <img src="/images/czech-stamp.png" style="position: absolute; left: 5.5rem; top: 1.5rem; max-height:15%;">
 <img src="/images/dec-black-mark.png" style="position: absolute; left: 2rem; top: 2.5rem; max-height:12%;">
 
 # Code is installed much more than it is packaged
+
+<style>
+  .slidev-page {
+    background-image: url("/images/cardboard-title.jpg");
+    background-size: cover;
+    background-position: -10%;
+  }
+</style>
 
 <!--
 Just like "code is read much more than it is written"
@@ -888,12 +1016,10 @@ packaging *is* a burden, but one you can remove from users
 -->
 
 ---
-layout: image
-image: /images/cardboard-title.jpg
+layout: default
 class: text-center
 ---
 
-<img src="/images/cardboard-title.jpg" style="position: absolute; left: 0px; top: -7%;">
 <img src="/images/inspected.png" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:25%;">
 
 # Delivered
@@ -908,5 +1034,10 @@ class: text-center
     border: 2px solid;
     width: 50%;
     left: 25%;
+  }
+  .slidev-page {
+    background-image: url("/images/cardboard-title.jpg");
+    background-size: cover;
+    background-position: -10%;
   }
 </style>
