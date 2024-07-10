@@ -15,7 +15,9 @@ image: /images/cardboard-title.jpg
 ---
 <!-- https://www.flickr.com/photos/27215653@N00/3638034382 -->
 
-<img src="/images/this-side-up.jpg" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:25%;">
+<img src="/images/cardboard-title.jpg" style="position: absolute; left: 1px; top: 1px;">
+<img src="/images/cardboard.jpg" style="position: absolute; left: 1px; top: 1px;">
+<img src="/images/this-side-up.png" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:25%;">
 
 # You Are Sharing Your Code Wrong
 ## (and what to do about it)
@@ -29,6 +31,8 @@ image: /images/cardboard-title.jpg
 
 <!--
 bold assertion
+
+find out _if_, _where_, and _how to fix_ wrong sharing
 
 don't worry, before we leave this talk a better way will be shown
 -->
@@ -219,6 +223,8 @@ What does a user do with requirements? Sounds like their problem!
 
 pip install? conda install? uv? apt?
 
+How did you install them? remember?
+
 ## Hand out multiple files
 
 are all files needed for any to work?
@@ -250,6 +256,10 @@ $ PYTHONPATH="/path/to/download/metuirology.zip:$PYTHONPATH" python
 
 <!--
 being in the dir with .zip doesn't add this for you
+
+seem to be simple share story; appealing
+
+I've seen all these strategies before
 -->
 
 ---
@@ -314,6 +324,8 @@ using relative imports like FS navigation
 
 fixing immediate failures instead of root cause
 
+so far concentrate on giving away *code*
+
 These are all fist-attempts at sharing, converging on packaging, slowly
 
 I've seen all these strategies before
@@ -353,11 +365,9 @@ between two parties
 
 less work on one end is more work on the other. vise versa
 
-connected pipeline
+not disconnected checkpoints; connected pipeline
 
-harin
-
-maybe you stared to notice we slowly created a software distribtuion
+so far not considered the 2nd party burden
 
 a package is the best way to share your code
 
@@ -391,13 +401,17 @@ between two parties
 
 less work on one end is more work on the other. vise versa
 
-maybe you stared to notice we slowly created a software distribtuion
+connected pipeline
+
+so far not considered the 2nd party burden
 
 a package is the best way to share your code
 
 responsible thing to do
 
 I also will sometimes refer to the entire exercise as packaging
+
+`wrapping➞delivering➞unwrapping`
 -->
 
 ---
@@ -786,7 +800,9 @@ dist/metuirology-1-py3-none-any.whl
 <!--
 time to wrap it all up; wheels
 
-not only gain new deployment channels (PyPI) but also gain ability to work with any versions of tools older than one year
+de-facto standard for dist
+
+wheel is a packaging standard; not one tool
 -->
 
 ---
@@ -802,6 +818,8 @@ image: /images/cardboard.jpg
 
 <!--
 wheels open up possibilities
+
+PyPI is way to deliver 1/2 and have user deliver final mile
 -->
 
 ---
@@ -818,7 +836,11 @@ image: /images/cardboard.jpg
 <!--
 don't even have to know what installer is used
 
+work with any versions of tools older than one year
+
 standards give *you* and your *users* choice; interoperability
+
+re-share only involves last 2 share steps
 -->
 
 ---
