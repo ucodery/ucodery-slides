@@ -15,7 +15,7 @@ image: /images/cardboard-title.jpg
 ---
 <!-- https://www.flickr.com/photos/27215653@N00/3638034382 -->
 
-<img src="/images/cardboard-title.jpg" style="display: none; position: absolute; left: 0px; top: 0px; width: 1px; height: 1px;">
+<img src="/images/cardboard-title.jpg" style="position: absolute; left: 0px; top: -7%;">
 <img src="/images/this-side-up.png" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:25%;">
 
 # You Are Sharing Your Code Wrong
@@ -42,6 +42,7 @@ image: /images/cardboard-title.jpg
 class: text-center
 ---
 
+<img src="/images/cardboard-title.jpg" style="position: absolute; left: 0px; top: -7%;">
 <img src="/images/to-label.jpg" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:25%;">
 
 # If you write code, you share code
@@ -53,8 +54,7 @@ everyone here  writes code; so you all share code
 -->
 
 ---
-layout: image
-image: /images/cardboard.jpg
+layout: default
 ---
 
 ## Not I ...
@@ -69,10 +69,19 @@ image: /images/cardboard.jpg
 
 </v-clicks>
 
+<style>
+  .slidev-page {
+    background-image: url("/images/cardboard.jpg");
+    background-size: cover;
+  }
+</style>
+
 ---
 layout: image
 image: /images/cardboard.jpg
 ---
+
+<img src="/images/cardboard.jpg" style="position: absolute; left: 0px; top: -7%;">
 
 ## If you ...
 
@@ -100,6 +109,7 @@ image: /images/cardboard-title.jpg
 class: text-center
 ---
 
+<img src="/images/cardboard-title.jpg" style="position: absolute; left: 0px; top: -7%;">
 <img src="/images/czech-stamp.png" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:15%;">
 <img src="/images/czech-stamp.png" style="position: absolute; left: 5.5rem; top: 1.5rem; max-height:15%;">
 <img src="/images/dec-black-mark.png" style="position: absolute; left: 2rem; top: 2.5rem; max-height:12%;">
@@ -116,6 +126,8 @@ take the code from "works on my machine" to "works on your machine"
 layout: image
 image: /images/cardboard.jpg
 ---
+
+<img src="/images/cardboard.jpg" style="position: absolute; left: 0px; top: -7%;">
 
 ````md magic-move
 ```python
@@ -341,6 +353,7 @@ transition: view-transition
 
 # Sharing code is a three step exercise
 
+<img src="/images/cardboard-title.jpg" style="position: absolute; left: 0px; top: -7%;">
 <img src="/images/australia-stamp.png" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:16%;">
 <img src="/images/special.png" style="position: absolute; left: 1rem; top: 1.5rem; max-height:18%;">
 <img src="/images/canada-stamp.png" style="position: absolute; left: 6.25rem; top: 1.5rem; max-height:15%;">
@@ -381,6 +394,7 @@ class: text-center
 
 # Sharing code is a three step exercise
 
+<img src="/images/cardboard-title.jpg" style="position: absolute; left: 0px; top: -7%;">
 <img src="/images/australia-stamp.png" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:16%;">
 <img src="/images/special.png" style="position: absolute; left: 1rem; top: 1.5rem; max-height:18%;">
 <img src="/images/canada-stamp.png" style="position: absolute; left: 6.25rem; top: 1.5rem; max-height:15%;">
@@ -422,6 +436,7 @@ transition: view-transition
 
 # What tool users want is to run `cmd`
 
+<img src="/images/cardboard-title.jpg" style="position: absolute; left: 0px; top: -7%;">
 <img src="/images/australia-stamp.png" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:16%;">
 <img src="/images/special.png" style="position: absolute; left: 1rem; top: 1.5rem; max-height:18%;">
 <img src="/images/canada-stamp.png" style="position: absolute; left: 6.25rem; top: 1.5rem; max-height:15%;">
@@ -445,6 +460,7 @@ class: text-center
 
 # What library users want is `import` to work
 
+<img src="/images/cardboard-title.jpg" style="position: absolute; left: 0px; top: -7%;">
 <img src="/images/australia-stamp.png" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:16%;">
 <img src="/images/special.png" style="position: absolute; left: 1rem; top: 1.5rem; max-height:18%;">
 <img src="/images/canada-stamp.png" style="position: absolute; left: 6.25rem; top: 1.5rem; max-height:15%;">
@@ -468,6 +484,7 @@ class: text-center
 
 # The best sharing strategy is the one that works the first time every time
 
+<img src="/images/cardboard-title.jpg" style="position: absolute; left: 0px; top: -7%;">
 <img src="/images/australia-stamp.png" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:16%;">
 <img src="/images/special.png" style="position: absolute; left: 1rem; top: 1.5rem; max-height:18%;">
 <img src="/images/canada-stamp.png" style="position: absolute; left: 6.25rem; top: 1.5rem; max-height:15%;">
@@ -623,6 +640,7 @@ image: /images/cardboard-title.jpg
 class: text-center
 ---
 
+<img src="/images/cardboard-title.jpg" style="position: absolute; left: 0px; top: -7%;">
 <img src="/images/czech-stamp.png" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:15%;">
 <img src="/images/czech-stamp.png" style="position: absolute; left: 5.5rem; top: 1.5rem; max-height:15%;">
 <img src="/images/dec-black-mark.png" style="position: absolute; left: 2rem; top: 2.5rem; max-height:12%;">
@@ -848,6 +866,7 @@ image: /images/cardboard-title.jpg
 class: text-center
 ---
 
+<img src="/images/cardboard-title.jpg" style="position: absolute; left: 0px; top: -7%;">
 <img src="/images/czech-stamp.png" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:15%;">
 <img src="/images/czech-stamp.png" style="position: absolute; left: 5.5rem; top: 1.5rem; max-height:15%;">
 <img src="/images/dec-black-mark.png" style="position: absolute; left: 2rem; top: 2.5rem; max-height:12%;">
@@ -874,6 +893,7 @@ image: /images/cardboard-title.jpg
 class: text-center
 ---
 
+<img src="/images/cardboard-title.jpg" style="position: absolute; left: 0px; top: -7%;">
 <img src="/images/inspected.png" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:25%;">
 
 # Delivered
