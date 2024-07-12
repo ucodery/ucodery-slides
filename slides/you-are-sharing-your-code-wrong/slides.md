@@ -103,6 +103,13 @@ layout: default
 
 </v-clicks>
 
+<style>
+  .slidev-page {
+    background-image: url("/images/cardboard.jpg");
+    background-size: cover;
+  }
+</style>
+
 <!--
 sharing doesn't require >1 person or >1 machine
 
@@ -110,13 +117,6 @@ deploy: including `cp`
 
 convinced yet?
 -->
-
-<style>
-  .slidev-page {
-    background-image: url("/images/cardboard.jpg");
-    background-size: cover;
-  }
-</style>
 
 ---
 layout: default
@@ -508,6 +508,8 @@ don't want to think about any of the means, don't care what you decided
 UNLESS is distracts, frustrates, stops them. If they can't or don't want to deal with your share
 
 You might not care either, but whatever you *pass on thinking* about you force your consumers to care about
+
+now you're giving them code and a PROBLEM
 -->
 
 ---
