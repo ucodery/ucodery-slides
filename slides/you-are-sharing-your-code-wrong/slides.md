@@ -32,9 +32,11 @@ class: text-center
 </style>
 
 <!--
-bold assertion
+I'm J.P. and I'll explain to you
 
-find out _if_, _where_, and _how to fix_ wrong sharing
+_if_, _where_, and _how to fix_ wrong sharing
+
+bold assertion
 
 don't worry, before we leave this talk a better way will be shown
 -->
@@ -121,9 +123,8 @@ layout: default
 class: text-center
 ---
 
-<img src="/images/czech-stamp.png" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:15%;">
-<img src="/images/czech-stamp.png" style="position: absolute; left: 5.5rem; top: 1.5rem; max-height:15%;">
-<img src="/images/dec-black-mark.png" style="position: absolute; left: 2rem; top: 2.5rem; max-height:12%;">
+<img src="/images/rwanda-stamp.png" style="position: absolute; right: 1.5rem; top: 1.5rem; max-height:13%;">
+<img src="/images/prague-stamp2.png" style="position: absolute; right: 2rem; top: 1rem; max-height:20%;">
 
 # How do you share your code?
 
@@ -265,6 +266,8 @@ layout: default
 <!--
 ## Hand out requirements
 
+sharing code _and_ METADATA
+
 What does a user do with requirements? Sounds like their problem!
 
 pip install? conda install? uv? apt?
@@ -382,11 +385,7 @@ using relative imports like FS navigation
 
 fixing immediate failures instead of root cause
 
-so far concentrate on giving away *code*
-
-These are all fist-attempts at sharing, converging on packaging, slowly
-
-I've seen all these strategies before
+so far concentrate on giving away *code*; these are all fist-attempts at sharing
 
 trade-offs for your user **because**...
 -->
@@ -397,12 +396,13 @@ class: text-center
 transition: view-transition
 ---
 
-# Sharing code is a three step exercise
+<img src="/images/ireland-stamp.png" style="position: absolute; right: 1.5rem; top: 1rem; max-height:13%;">
+<img src="/images/netherlands-stamp.png" style="position: absolute; right: 5rem; top: 1rem; max-height:13%;">
+<img src="/images/spain-stamp.png" style="position: absolute; right: 1.5rem; top: 5.1rem; max-height:13%;">
+<img src="/images/france-stamp.png" style="position: absolute; right: 4.9rem; top: 4.9rem; max-height:15%;">
+<img src="/images/special.png" style="position: absolute; right: 0rem; top: 5.5rem; max-height:14%;">
 
-<img src="/images/australia-stamp.png" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:16%;">
-<img src="/images/special.png" style="position: absolute; left: 1rem; top: 1.5rem; max-height:18%;">
-<img src="/images/canada-stamp.png" style="position: absolute; left: 6.25rem; top: 1.5rem; max-height:15%;">
-<img src="/images/papua-stamp.png" style="position: absolute; left: 11.75rem; top: 1.5rem; max-height:15%;">
+# Sharing code is a three step exercise
 
 <v-clicks>
 
@@ -441,12 +441,13 @@ layout: default
 class: text-center
 ---
 
-# Sharing code is a three step exercise
+<img src="/images/ireland-stamp.png" style="position: absolute; right: 1.5rem; top: 1rem; max-height:13%;">
+<img src="/images/netherlands-stamp.png" style="position: absolute; right: 5rem; top: 1rem; max-height:13%;">
+<img src="/images/spain-stamp.png" style="position: absolute; right: 1.5rem; top: 5.1rem; max-height:13%;">
+<img src="/images/france-stamp.png" style="position: absolute; right: 4.9rem; top: 4.9rem; max-height:15%;">
+<img src="/images/special.png" style="position: absolute; right: 0rem; top: 5.5rem; max-height:14%;">
 
-<img src="/images/australia-stamp.png" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:16%;">
-<img src="/images/special.png" style="position: absolute; left: 1rem; top: 1.5rem; max-height:18%;">
-<img src="/images/canada-stamp.png" style="position: absolute; left: 6.25rem; top: 1.5rem; max-height:15%;">
-<img src="/images/papua-stamp.png" style="position: absolute; left: 11.75rem; top: 1.5rem; max-height:15%;">
+# Sharing code is a three step exercise
 
 ## packaging➞distributing➞installing
 
@@ -467,7 +468,7 @@ between two parties
 
 less work on one end is more work on the other. vise versa
 
-connected pipeline
+not disconnected checkpoints; connected pipeline
 
 so far not considered the 2nd party burden
 
@@ -483,15 +484,13 @@ I also will sometimes refer to the entire exercise as packaging
 ---
 layout: default
 class: text-center
-transition: view-transition
 ---
 
-# What tool users want is to run `cmd`
+# What users want is to run the code
 
-<img src="/images/australia-stamp.png" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:16%;">
-<img src="/images/special.png" style="position: absolute; left: 1rem; top: 1.5rem; max-height:18%;">
-<img src="/images/canada-stamp.png" style="position: absolute; left: 6.25rem; top: 1.5rem; max-height:15%;">
-<img src="/images/papua-stamp.png" style="position: absolute; left: 11.75rem; top: 1.5rem; max-height:15%;">
+<img src="/images/monty-stamp3.png" style="position: absolute; right: 1.5rem; top: 1.6rem; max-height:15%;">
+<img src="/images/monty-stamp2.png" style="position: absolute; right: 5.25rem; top: 1.5rem; max-height:15%;">
+<img src="/images/monty-stamp1.png" style="position: absolute; right: 8.7rem; top: 1.7rem; max-height:14.5%;">
 
 <style>
   .slidev-page {
@@ -502,13 +501,13 @@ transition: view-transition
 </style>
 
 <!--
-don't want to think about any of the means: files, pip, internet, user-sitepackages
+this includes script/exe, libraries/imports too
 
-don't care what packaging format you use, or what distribution method you choose, EXCEPT the more difficult or fragile it is the more likely they will bail
+don't want to think about any of the means, don't care what you decided
+
+UNLESS is distracts, frustrates, stops them. If they can't or don't want to deal with your share
 
 You might not care either, but whatever you *pass on thinking* about you force your consumers to care about
-
-this includes libraries/imports too
 -->
 
 ---
@@ -516,47 +515,16 @@ layout: default
 class: text-center
 ---
 
-# What library users want is `import` to work
+<img src="/images/australia-stamp.png" style="position: absolute; right: 1.5rem; top: 1.5rem; max-height:18%;">
+<img src="/images/special.png" style="position: absolute; right: .25rem; top: 3rem; max-height:18%;">
 
-<img src="/images/australia-stamp.png" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:16%;">
-<img src="/images/special.png" style="position: absolute; left: 1rem; top: 1.5rem; max-height:18%;">
-<img src="/images/canada-stamp.png" style="position: absolute; left: 6.25rem; top: 1.5rem; max-height:15%;">
-<img src="/images/papua-stamp.png" style="position: absolute; left: 11.75rem; top: 1.5rem; max-height:15%;">
-
-<style>
-  .slidev-page {
-    background-image: url("/images/cardboard-title.jpg");
-    background-size: cover;
-    background-position: -10%;
-  }
-</style>
-
-<!--
-don't want to think about any of the means: files, pip, internet, user-sitepackages
-
-don't care what packaging format you use, or what distribution method you choose, EXCEPT the more difficult or fragile it is the more likely they will bail
-
-You might not care either, but whatever you *pass on thinking* about you force your consumers to care about
-
-this includes libraries/imports too
--->
-
----
-layout: default
-class: text-center
----
-
-# The best sharing strategy is the one that works the first time every time
-
-<img src="/images/australia-stamp.png" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:16%;">
-<img src="/images/special.png" style="position: absolute; left: 1rem; top: 1.5rem; max-height:18%;">
-<img src="/images/canada-stamp.png" style="position: absolute; left: 6.25rem; top: 1.5rem; max-height:15%;">
-<img src="/images/papua-stamp.png" style="position: absolute; left: 11.75rem; top: 1.5rem; max-height:15%;">
+# The best sharing strategy is the one that works every time
 
 <style>
   h1 {
-    font-size: 3.4rem;
-    line-height: 1.4em;
+    font-size: 4rem;
+    line-height: 1.2em;
+    top: 35%;
   }
   .slidev-page {
     background-image: url("/images/cardboard-title.jpg");
@@ -714,6 +682,8 @@ Cannot install (pip), nor create a library for import ... or multi-file exe
 
 Simple, but not very extensible solution (yet)
 
+asking users to have specific `hatch` is 1 more share step
+
 here to tell you there is a better way
 -->
 
@@ -722,9 +692,8 @@ layout: default
 class: text-center
 ---
 
-<img src="/images/czech-stamp.png" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:15%;">
-<img src="/images/czech-stamp.png" style="position: absolute; left: 5.5rem; top: 1.5rem; max-height:15%;">
-<img src="/images/dec-black-mark.png" style="position: absolute; left: 2rem; top: 2.5rem; max-height:12%;">
+<img src="/images/malaysia2-stamp.png" style="position: absolute; right: 1.5rem; top: 1.5rem; max-height:15%;">
+<img src="/images/malaysia2-stamp.png" style="position: absolute; right: 5.1rem; top: 1.5rem; max-height:15%;">
 
 # Restructure as a package
 
@@ -843,8 +812,6 @@ if __name__ == "__main__":
 <!--
 build-system is a big choice you **must** make
 
-asking users to have specific `hatch` is 1 more share step
-
 does bring a lot of impact; just choose one that works
 -->
 
@@ -900,7 +867,7 @@ layout: default
 </style>
 
 <!--
-after all this, the project definition stays the same!
+*more* steps to deliver same as script; so far
 
 1 pyproject defines 1 project -- not many
 
@@ -980,6 +947,8 @@ work with any versions of tools older than one year
 standards give *you* and your *users* choice; interoperability
 
 re-share only involves last 2 share steps
+
+code once wrapped can be shared as much as you want; actually really good
 -->
 
 ---
@@ -987,9 +956,9 @@ layout: default
 class: text-center
 ---
 
-<img src="/images/czech-stamp.png" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:15%;">
-<img src="/images/czech-stamp.png" style="position: absolute; left: 5.5rem; top: 1.5rem; max-height:15%;">
-<img src="/images/dec-black-mark.png" style="position: absolute; left: 2rem; top: 2.5rem; max-height:12%;">
+<img src="/images/czech-stamp.png" style="position: absolute; right: 1.5rem; top: 1.5rem; max-height:15%;">
+<img src="/images/czech-stamp.png" style="position: absolute; right: 5.5rem; top: 1.5rem; max-height:15%;">
+<img src="/images/dec-black-mark.png" style="position: absolute; right: .25rem; top: 2.5rem; max-height:12%;">
 
 # Code is installed much more than it is packaged
 
@@ -1020,7 +989,7 @@ layout: default
 class: text-center
 ---
 
-<img src="/images/inspected.png" style="position: absolute; left: 1.5rem; top: 1.5rem; max-height:25%;">
+<img src="/images/usps-label.jpg" style="position: absolute; right: 1.5rem; top: 5%; max-height:90%;">
 
 # Delivered
 
@@ -1033,7 +1002,8 @@ class: text-center
     transform: rotate(-25deg);
     border: 2px solid;
     width: 50%;
-    left: 25%;
+    left: 5%;
+    top: 40%;
   }
   .slidev-page {
     background-image: url("/images/cardboard-title.jpg");
