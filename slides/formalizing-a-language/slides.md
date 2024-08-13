@@ -30,6 +30,7 @@ div {
 
 ---
 layout: intro
+transition: view-transition
 ---
 
 # Python Language
@@ -38,7 +39,7 @@ layout: intro
 - ## Letters form words
 - ## Words form sentences
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -49,6 +50,7 @@ layout: intro
 
 ---
 layout: intro
+transition: view-transition
 ---
 
 # Python Language
@@ -60,7 +62,7 @@ layout: intro
     - `==` `@` `//=`
 - ## Words form sentences
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -68,6 +70,12 @@ layout: intro
     <carbon:logo-mastodon />
   </Item>
 </BarBottom>
+
+<!--
+sentences then form paragraphs (modules)
+
+paragraphs then form essays (programs)
+-->
 
 ---
 layout: intro
@@ -91,7 +99,7 @@ code {
 }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -119,7 +127,7 @@ code {
 }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -129,9 +137,13 @@ code {
 </BarBottom>
 
 <!--
-Code is read more often than it is read
+Code is read more often than it is written
 
- up equals requests dot get https status dot python dot org
+up equals requests dot get https status dot python dot org
+
+if another dev can recreate code, good communication
+
+if computer can't understand me, bad communication
 -->
 
 ---
@@ -153,7 +165,7 @@ code {
 }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -164,6 +176,8 @@ code {
 
 <!--
 Code is read more often - by whom? computers
+
+what does code "mean" to compuers?
 -->
 
 ---
@@ -211,7 +225,7 @@ flowchart TD
   L---M
 ```
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -219,6 +233,13 @@ flowchart TD
     <carbon:logo-mastodon />
   </Item>
 </BarBottom>
+
+<!--
+tells computer:
+
+- what are the words? which are nouns and which verbs?
+- which relate to each other? presedence
+-->
 
 ---
 layout: intro
@@ -233,7 +254,7 @@ h1 {
 }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -276,7 +297,7 @@ code {
 }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -286,7 +307,13 @@ code {
 </BarBottom>
 
 <!--
-whitespace is not (usually) turned into a token
+also "tokenizing"
+
+whitespace is not (always) turned into a token
+
+`\n` added
+
+from `-m tokenize`
 -->
 
 ---
@@ -324,7 +351,7 @@ code {
 </style>
 
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -334,8 +361,13 @@ code {
 </BarBottom>
 
 <!--
+nested objects look like tree on its side
+
 order between tree and line no longer lines up
+
 parsing tells the computer about precidence
+
+`-m ast`
 -->
 
 ---
@@ -368,7 +400,7 @@ code {
 }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -378,7 +410,11 @@ code {
 </BarBottom>
 
 <!--
-order reflects AST bottom-up. not code order
+not code order, but order that makes sense to computer
+
+order reflects AST bottom-up
+
+`-m dis`
 -->
 
 ---
@@ -394,7 +430,7 @@ h1 {
 }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -413,7 +449,7 @@ layout: intro
 - ## Builds words into sentences
 - ## Does not have to make sense
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -424,7 +460,7 @@ layout: intro
 
 <!--
 and so defines what word combos make not-this-language
-build sentences into paragraphs, into essays ...
+
 a gramatically correct program can crash
 -->
 
@@ -447,7 +483,7 @@ code {
 }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -475,7 +511,7 @@ code {
 }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -504,7 +540,7 @@ flowchart LR
   linkStyle 1 stroke:#960050,color:#960050,stroke-width:3px;
 ```
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -512,6 +548,12 @@ flowchart LR
     <carbon:logo-mastodon />
   </Item>
 </BarBottom>
+
+<!--
+parser takes in tokens and grammar
+
+produces AST; or error messages
+-->
 
 ---
 layout: intro
@@ -522,7 +564,7 @@ layout: intro
 - ## Parsing expression grammar (PEG)
 - ## Packrat parser
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -532,9 +574,16 @@ layout: intro
 </BarBottom>
 
 <!--
-grammar is the written rules; the parser is the program that fulfills those rules
+grammar is the set of written rules
+
+Grammar/python.gram
+
 PEG is a catagory of grammars. Python's rule implementation is unique
+
+the parser is the program that fulfills those rules
+
 recusive decent parser
+
 packrat = memoization
 -->
 
@@ -547,7 +596,7 @@ layout: intro
 - ## PEG is also a language
 - ## Has its own syntax and rules
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -555,6 +604,16 @@ layout: intro
     <carbon:logo-mastodon />
   </Item>
 </BarBottom>
+
+<!--
+PEG is also words written in a file that have precise meaning; it is also a language
+
+all languages have grammar, so PEG has a grammar
+
+we must detour to learn Python's Grammar's grammar
+
+once we do, you will be able to read ALL Python grammar
+-->
 
 ---
 layout: intro
@@ -578,7 +637,7 @@ code {
 }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -588,6 +647,8 @@ code {
 </BarBottom>
 
 <!--
+keywords are literal strings the grammar is looking for: sometimes Python Keywords
+
 definitinos are comprised of tokens, keywords, and other rules
 -->
 
@@ -616,7 +677,7 @@ code {
 }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -624,6 +685,10 @@ code {
     <carbon:logo-mastodon />
   </Item>
 </BarBottom>
+
+<!--
+very reminecent of regex
+-->
 
 ---
 layout: intro
@@ -657,7 +722,7 @@ code {
 }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -665,6 +730,12 @@ code {
     <carbon:logo-mastodon />
   </Item>
 </BarBottom>
+
+<!--
+very reminecent of regex
+
+`','.stuff` is like `','.join(stuff)`
+-->
 
 ---
 layout: intro
@@ -691,7 +762,7 @@ code {
 }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -699,6 +770,12 @@ code {
     <carbon:logo-mastodon />
   </Item>
 </BarBottom>
+
+<!--
+~ says if you come to this point in a traversal you must either succeed here or fail to parse
+
+otherwise, the parser will try everything else before failing
+-->
 
 ---
 layout: intro
@@ -713,7 +790,7 @@ h1 {
 }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -743,7 +820,7 @@ code {
 }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -751,6 +828,12 @@ code {
     <carbon:logo-mastodon />
   </Item>
 </BarBottom>
+
+<!--
+first rule def: `assignment: ...`
+
+first two out b/c annotations
+-->
 
 ---
 layout: center
@@ -786,7 +869,7 @@ flowchart TD
   L---M
 ```
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -794,6 +877,16 @@ flowchart TD
     <carbon:logo-mastodon />
   </Item>
 </BarBottom>
+
+<!--
+important: real parser builds the tree bottom up
+
+adds nodes as it reaches valid ends to rules
+
+to save time, we will follow the parser down, but not back up its recursion
+
+current match: `(star_targets '=')+ (yield_expr | star_expressions)`
+-->
 
 ---
 layout: center
@@ -812,7 +905,7 @@ code {
 }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -838,7 +931,7 @@ code {
 }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -865,7 +958,7 @@ code {
 }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -893,7 +986,7 @@ code {
 }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -901,6 +994,12 @@ code {
     <carbon:logo-mastodon />
   </Item>
 </BarBottom>
+
+<!--
+NAME is a terminal state - no more recursion
+
+found "up"
+-->
 
 ---
 layout: center
@@ -937,7 +1036,7 @@ flowchart TD
   L---M
 ```
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -964,7 +1063,7 @@ code {
 }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -972,6 +1071,16 @@ code {
     <carbon:logo-mastodon />
   </Item>
 </BarBottom>
+
+<!--
+current match: `(star_targets '=')+ (yield_expr | star_expressions)`
+
+you&I know yield is out. Parser will try to make it work, eventually return unsuccessful
+
+move on to star_expressions
+
+could continue to follow each, every rule, or....
+-->
 
 ---
 layout: center
@@ -992,7 +1101,7 @@ code {
 }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -1000,6 +1109,16 @@ code {
     <carbon:logo-mastodon />
   </Item>
 </BarBottom>
+
+<!--
+skip all these rules
+
+primary is the next one we don't take a simple "pass through" branch
+
+but! this rule stack is important for operator presidence
+
+go read the rules if you are currious!
+-->
 
 ---
 layout: center
@@ -1021,7 +1140,7 @@ code {
 }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -1029,6 +1148,16 @@ code {
     <carbon:logo-mastodon />
   </Item>
 </BarBottom>
+
+<!--
+first 4 "left-recursive"
+
+infinite mix/match of attr, call, slice
+
+only ever leave this rule with an atom
+
+next match is call
+-->
 
 ---
 layout: center
@@ -1065,7 +1194,7 @@ flowchart TD
   L---M
 ```
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -1073,6 +1202,14 @@ flowchart TD
     <carbon:logo-mastodon />
   </Item>
 </BarBottom>
+
+<!--
+still don't know what is called
+
+still don't know what args are
+
+but a call happens
+-->
 
 ---
 layout: center
@@ -1094,7 +1231,7 @@ code {
 }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -1102,6 +1239,14 @@ code {
     <carbon:logo-mastodon />
   </Item>
 </BarBottom>
+
+<!--
+back at primary
+
+matching "requests.get"
+
+recurse in this rule _again_; now atom
+-->
 
 ---
 layout: center
@@ -1128,7 +1273,7 @@ code {
 }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -1136,6 +1281,14 @@ code {
     <carbon:logo-mastodon />
   </Item>
 </BarBottom>
+
+<!--
+current match: `requests`
+
+matching both NAMES in separate rules is important
+
+tells python order of name resolution; load requests then load get from requests
+-->
 
 ---
 layout: center
@@ -1175,7 +1328,7 @@ flowchart TD
   L---M
 ```
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -1183,6 +1336,14 @@ flowchart TD
     <carbon:logo-mastodon />
   </Item>
 </BarBottom>
+
+<!--
+this is what we're calling
+
+but what are args?
+
+first time we saw primary the rule within `()` was arguments
+-->
 
 ---
 layout: center
@@ -1199,7 +1360,7 @@ code {
 }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -1207,6 +1368,10 @@ code {
     <carbon:logo-mastodon />
   </Item>
 </BarBottom>
+
+<!--
+bounds checking
+-->
 
 ---
 layout: center
@@ -1227,7 +1392,7 @@ code {
 }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -1235,6 +1400,14 @@ code {
     <carbon:logo-mastodon />
   </Item>
 </BarBottom>
+
+<!--
+this complex branching enforces args kwargs ordering
+
+starred_expression... seen this before
+
+last time jumped to primary; now jump to atom
+-->
 
 ---
 layout: center
@@ -1261,7 +1434,7 @@ code {
 }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -1269,6 +1442,10 @@ code {
     <carbon:logo-mastodon />
   </Item>
 </BarBottom>
+
+<!--
+match STRING, not quite terminal
+-->
 
 ---
 layout: center
@@ -1285,7 +1462,7 @@ code {
 }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -1293,6 +1470,10 @@ code {
     <carbon:logo-mastodon />
   </Item>
 </BarBottom>
+
+<!--
+this odd rule is what allows sequential string literals that concat at compile time
+-->
 
 ---
 layout: center
@@ -1329,7 +1510,7 @@ flowchart TD
   L---M
 ```
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -1356,7 +1537,7 @@ li {
 }
 </style>
 
-<BarBottom  color="#F8F8F0" bg="#282634" title="Formalizing a Language">
+<BarBottom  color="#F8F8F0" bg="#282634" title="slides.ucodery.com/formalizing-a-language">
   <Item text="@ucodery">
     <carbon:logo-github />
   </Item>
@@ -1364,6 +1545,12 @@ li {
     <carbon:logo-mastodon />
   </Item>
 </BarBottom>
+
+<!--
+now the computer understans the line you typed
+
+next would be to turn the tree flat again - into bytecode
+-->
 
 ---
 layout: image
