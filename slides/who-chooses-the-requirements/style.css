@@ -1,0 +1,36 @@
+.slidev-layout {
+  background-image: url("/images/backdrop.jpg");
+  background-size: cover;
+  box-shadow: 16px 0px #363f36 inset;
+}
+.slidev-layout h1 {
+  color: #2a2a2a;
+  font-size: 3.7rem;
+  font-weight: 350;
+  line-height: 1em;
+}
+.slidev-layout h2 {
+  color: #0a0a0a;
+  font-size: 2.75rem;
+  font-weight: 300;
+  line-height: 1em;
+}
+.slidev-layout ul {
+  color: #2a2a2a;
+  font-size: 2.25rem;
+  font-weight: 300;
+  line-height: 1em;
+}
+.slidev-layout code {
+  font-size: 1.5rem;
+  background: rgba(242, 242, 242, 0.35);
+  line-height: 1.25em;
+}
+.slidev-layout ul code {
+  font-size: 1.8rem;
+  color: #556060;
+}
+:not(pre) > code:before,
+:not(pre) > code:after {
+  content: "";
+}
