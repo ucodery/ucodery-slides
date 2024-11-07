@@ -37,17 +37,41 @@ also: dependencies
 -->
 
 ---
+clicks: 1
+---
 
 # Where Are Requirements Recorded
 - in code
 
-<v-click>
+<div v-click="'1'" style="transition: 300ms ease;">
 
-```python
-import more_itertools.more
+```rust
+use anyhow::Context;
 ```
 
-</v-click>
+</div>
+
+<div v-click="'1'" style="transition: 600ms 300ms ease;">
+
+```python
+import psutil
+```
+
+</div>
+
+<div v-click="'1'" style="transition: 900ms 600ms ease;">
+
+```ruby
+require 'optimist'
+```
+
+</div>
+
+<style>
+  .slidev-vclick-target {
+    transition: all 500ms ease;
+  }
+</style>
 
 <BarBottom  color="#F8F8F0" bg="#363f36" title="slides.ucodery.com/who-chooses-the-requirements">
   <Item text="@ucodery"><carbon:logo-github /></Item>
@@ -55,7 +79,7 @@ import more_itertools.more
 </BarBottom>
 
 <!--
-as: include, import, require, use
+as: include, import, require, use, load
 
 but not of project-owned files
 
@@ -114,26 +138,47 @@ layout: two-cols-header
 
 ::left::
 
-```nushell
-more-itertools>=10.1,<12
+<!--javascript: prettier-->
+```json
+"dependencies": {
+  "acorn": ">=8.14 <9",
+}
 ```
 
-```nushell
-more-itertools
+<!--ruby lolcat-->
+```ruby
+spec.add_dependency(
+  "optimist"
+)
 ```
 
-```nushell
-more-itertools<10.1,!=3,>12
+<!--rust: ripgrep-->
+```toml
+[dependencies]
+anyhow = "~1.0.75"
 ```
 
 ::right::
 
-```nushell
-more-itertools>10.1
+<!--python glances-->
+```toml
+dependencies = [
+  "psutil==5.6.7"
+]
 ```
 
-```nushell
-more-itertools==10.1
+<!--go: glow-->
+```lua
+require (
+  github.com/spf13/cobra v1.7.0
+)
+```
+
+<!--C: jq-->
+```python
+depends_on(
+  "oniguruma@:5.9,6.1.2,6.9:"
+)
 ```
 
 <!-- center colums in page -->
@@ -156,9 +201,11 @@ no way to know how many discrete versions a range contains
 
 <v-click>
 
-```toml
-# pyproject.toml
-dependencies = ["more-itertools"]
+```ruby
+# lolcat.gemspec
+s.add_dependency "paint", "~> 2.1"
+s.add_dependency "optimist", "~> 3.0.0"
+s.add_dependency "manpages", "~> 0.6.1"
 ```
 
 </v-click>
@@ -172,10 +219,8 @@ dependencies = ["more-itertools"]
 <v-click>
 
 ```yaml
-# meta.yaml
-requirements:
-  run:
-    - more-itertools
+# PKGBUILD
+depends=('ruby' 'ruby-paint' 'ruby-optimist' 'ruby-manpages')
 ```
 
 </v-click>
@@ -184,6 +229,12 @@ requirements:
     <Item text="@ucodery"><carbon:logo-github /></Item>
     <Item text="@ucodery@fosstodon.org"><carbon:logo-mastodon /></Item>
   </BarBottom>
+
+<!--
+machine and human readable
+
+standardized format
+-->
 
 ---
 
@@ -230,13 +281,15 @@ run/build/test
 
 <v-click>
 
-- Executing the `asciinema` program requires `python`
+- Executing the `glances` program
+  - `python`, `psutil`, `packaging`, `defusedxml`
 
 </v-click>
 
 <v-click>
 
-- Building the `asciinema` package requires `python`, `setuptools`, `wheel`, and `build`
+- Building the `glances` package
+  - `python`, `setuptools`, `wheel`, `build`
 
 </v-click>
 
@@ -256,7 +309,7 @@ really always _runtime_ depeding on what task is currently being run
 ---
 
 # When Are Requirements Resolved
-- building: statically linking
+- building: compiling
 - bundling: locking or vendoring
 - executing: dynamic loading
 
@@ -297,6 +350,8 @@ transition: view-transition
 </BarBottom>
 
 <!--
+tools make choices on our behalf, but not the Who
+
 (some) build tool selects which of many local versions to build against
 
 install tool may be responsible for deploying multiple software projects
@@ -347,18 +402,18 @@ what if user upgrades requirements on system _after_ installing the software?
 ---
 
 # Code Requirements
-```python
-import more_itertools.more
+```c
+#include <oniguruma.h>
 ```
 
 # Project Requirements
-```nushell
-more-itertools >= 10.0
+```yaml
+BuildRequires:  oniguruma-devel
 ```
 
 # Execution Requirement
-```nix
-.../site-packages/more_itertools/more.py
+```bash
+/lib64/libonig.so.5
 ```
 
 <BarBottom  color="#F8F8F0" bg="#363f36" title="slides.ucodery.com/who-chooses-the-requirements">
@@ -436,6 +491,8 @@ can be nice, can reduce errors; can equally make fixing bad requirements terribl
 
 none of these can aboslutly remove the users' autonomy
 it only makes it harder
+
+Restrictive ranges *infectious* when committed to VCS
 
 Once committed in the version, there is no fix to overrestriction
 -->
