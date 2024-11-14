@@ -27,26 +27,37 @@ This talk may be for you if you have ever wondered why one binary was run over a
 * Conclusion (2 minutes)
 
 
-# Who chooses the requirements
+# Welcome To Hell
 
 ### Summary
-Learn who really controls a software's environment and support, rather than dictate, healthy environment creation.
+Welcome to dependency hell. Some of us who came here to visit decided to stayed a while. It's not as bad as the name makes it sound, but some may want to find their way back. Here's handy guide to get you through.
 
 ### Description
-All modern software is the composition of independently developed projects. As a programmer you have some duty to record the relationship your project has to other projects in order to build and run correctly.
-
-It is tempting to think that you, the software author, or you the package maintainer, are in full control over what those requirements are, but you are not. This misunderstanding is the source of many errors. And when authors do discover this but instead of accept it they make a power grab, all they really do is contribute to "dependency hell".
-
-Don't add to dependency hell, add to the users' success and learn to live with less control.
 
 ### Overview
 * Introduction (2 minutes)
-* Mistaken identities of requirement control (3 minutes)
-* What level of control different roles actually have (4 minutes)
-* The motivation for upgrading/downgrading a requirement (3 minutes)
-* The point of requirements in a project (6 minutes)
-* Different users of a package working together for success (4 minutes)
+  * so your Python environment is broken -- so what now
+* Locate Yourself (3 minutes)
+  * identify the Python being used
+  * identify any virtualenvironments in use
+  * verify any other executables are using this python+venv
+* Look Around (4 minutes)
+  * scrutinize `sys.path`
+  * trace import system
+* Reading the Map (5 minutes)
+  * Module objects
+  * `__file__`, `__spec__`, `importlib`
+* A Familiar Helper (4 minutes)
+  * how to get `pip` into any environment
+* Reading the Map Legend (5 minutes)
+  * `.dist-info`, `METADATA`, and more
+  * `.egg-info`, `PKG-INFO`
+* Zooming Out On the Map (5 minutes)
+  * navigating pypi.org
+  * inspecting `.whl`, `.sdist`
+  * jumping into VCS and reading `pyproject.toml`, `setup.py`, `requirements.txt`, ...
 * Conclusion (2 minutes)
+  * fearlessly walk out of hell
 
 
 # What's your personality type?
