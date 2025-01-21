@@ -30,7 +30,7 @@ This talk may be for you if you have ever wondered why one binary was run over a
 # Welcome To Hell
 
 ### Summary
-Welcome to dependency hell. Some of us who came here to visit decided to stayed a while. It's not as bad as the name makes it sound, but some may want to find their way back. Here's handy guide to get you through.
+Welcome to dependency hell. It's not as bad as the name makes it sound, but you may want to find you way out. I never intended to end up here myself, but now I'm here I decided to stayed a while and help others that fall in get back out. Here's my handy guide to get you through.
 
 ### Description
 
