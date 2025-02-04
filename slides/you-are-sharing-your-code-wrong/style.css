@@ -1,8 +1,11 @@
- :root {
-   --slidev-code-background: rgb(248 248 248 / 80%);
- }
+:root {
+  /* remove the first family "Fira Code" which uses ligatures */
+  --slidev-code-font-family: ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+  --slidev-code-background: rgb(248 248 248 / 80%);
+}
 .slidev-layout h1 {
-  color: #0A0A0A;
+  color: #0a0a0a;
   font-size: 5rem;
   font-weight: 400;
   line-height: 1em;
@@ -10,31 +13,32 @@
   top: 33%;
 }
 .slidev-layout h2 {
-  color: #0A0A0A;
+  color: #0a0a0a;
   font-size: 3.5rem;
   font-weight: 325;
   line-height: 1em;
-  padding-top: .25em;
-  padding-bottom: .25em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
 }
 .slidev-layout h3 {
-  color: #0A0A0A;
+  color: #0a0a0a;
   font-size: 2.25rem;
   font-weight: 250;
   line-height: 1em;
 }
 .slidev-layout ul {
-  color: #0A0A0A;
+  color: #0a0a0a;
   font-size: 2.25rem;
   font-weight: 300;
   line-height: 1em;
 }
-:not(pre) > code:before, :not(pre) > code:after {
-  content: '';
+:not(pre) > code:before,
+:not(pre) > code:after {
+  content: "";
 }
 .slidev-layout h1 code {
   font-size: 3.5rem;
-  background: rgba(242,242,242,0.35);
+  background: rgba(242, 242, 242, 0.35);
 }
 .slidev-layout ul code {
   font-size: 2rem;

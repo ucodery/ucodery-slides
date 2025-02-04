@@ -34,7 +34,7 @@ class: text-center
 <!--
 I'm J.P. and I'll explain to you
 
-_if_, _where_, and _how to fix_ wrong sharing
+_if_, and _how to fix_ wrong sharing
 
 bold assertion
 
@@ -61,7 +61,11 @@ class: text-center
 <!--
 another bold assertion
 
-everyone here  writes code; so you all share code
+everyone here writes code; so you all share code
+
+You __maight__ be using less-than-optimal sh
+
+if everyone shares, high chance some are sharing wrong
 -->
 
 ---
@@ -113,6 +117,8 @@ layout: default
 <!--
 sharing doesn't require >1 person or >1 machine
 
+sharing doesn't require code to leave the machine
+
 deploy: including `cp`
 
 convinced yet?
@@ -159,7 +165,7 @@ def fetch_forecast(lat, lon):
     location = urllib3.request("GET", f"https://api.weather.gov/points/{lat},{lon}")
     forecast = urllib3.request("GET", location.json()["properties"]["forecast"])
     return [
-        "🌨️" if "snow" in (sF := period["shortForecast"].lower()) else 
+        "🌨️" if "snow" in (sF := period["shortForecast"].lower()) else
         "🌧️" if "rain" in sF else
         "☁️" if "cloud" in sF else
         "☀️"
@@ -220,7 +226,13 @@ $ python -m metuirology
 </style>
 
 <!--
-knowning ABS won't help import
+be explicit with Python; side-step problem
+
+can't import file not on PYTHONPATH, even knowning ABS path
+
+;;;
+
+this fixes import; still a side-step
 -->
 
 ---
@@ -268,9 +280,9 @@ layout: default
 
 sharing code _and_ METADATA
 
-What does a user do with requirements? Sounds like their problem!
+What does a reciever do with requirements? Sounds like their problem!
 
-pip install? conda install? uv? apt?
+pip install? conda install? uv? apt? Same Env!
 
 How did you install them? remember?
 
@@ -278,7 +290,7 @@ How did you install them? remember?
 
 are all files needed for any to work?
 
-user must now unzip.
+reciever must now unzip. Or not...
 -->
 
 ---
@@ -311,6 +323,8 @@ $ PYTHONPATH="/path/to/download/metuirology.zip:$PYTHONPATH" python
 
 <!--
 being in the dir with .zip doesn't add this for you
+
+side-step instructing user to unzip; ADD telling them how to edit bashrc
 
 seem to be simple share story; appealing
 
@@ -375,7 +389,7 @@ ImportError: attempted relative import beyond top-level package
 <!--
 failed to put module in PYTHONPATH
 
-failed to put entire pkg in PYTHONPATH
+failed to put ALL modules in PYTHONPATH
 
 failed to install deps (in same environment)
 
@@ -385,9 +399,11 @@ using relative imports like FS navigation
 
 fixing immediate failures instead of root cause
 
+the code is not resiliant to being shared
+
 so far concentrate on giving away *code*; these are all fist-attempts at sharing
 
-trade-offs for your user **because**...
+low effort for US; trade-offs for the reciever **because**...
 -->
 
 ---
@@ -431,6 +447,8 @@ not disconnected checkpoints; connected pipeline
 
 so far not considered the 2nd party burden
 
+duct tape & bubblegum vs "unbox-worthy"
+
 a package is the best way to share your code
 
 responsible thing to do
@@ -472,6 +490,8 @@ not disconnected checkpoints; connected pipeline
 
 so far not considered the 2nd party burden
 
+duct tape & bubblegum vs "unbox-worthy"
+
 a package is the best way to share your code
 
 responsible thing to do
@@ -503,6 +523,8 @@ class: text-center
 <!--
 this includes script/exe, libraries/imports too
 
+they want it to run when and where they say
+
 don't want to think about any of the means, don't care what you decided
 
 UNLESS is distracts, frustrates, stops them. If they can't or don't want to deal with your share
@@ -517,8 +539,8 @@ layout: default
 class: text-center
 ---
 
-<img src="/images/australia-stamp.png" style="position: absolute; right: 1.5rem; top: 1.5rem; max-height:18%;">
-<img src="/images/special.png" style="position: absolute; right: .25rem; top: 3rem; max-height:18%;">
+<img src="/images/lewis-clark.png" style="position: absolute; right: 1.5rem; top: 1.5rem; max-height:18%;">
+<img src="/images/special.png" style="position: absolute; right: 2.5rem; top: 1.5rem; max-height:24%;">
 
 # The best sharing strategy is the one that works every time
 
@@ -536,17 +558,23 @@ class: text-center
 </style>
 
 <!--
+every time is unreachable ideal state
+
+strategies:
+
 least number of steps (== 1)
 
-has no "alternate path" instructions (OS)
+has no user choices; "alternate path" instructions (OS)
 
-low congnative overhead; is familiar to the user
+low distraction, congnative overhead; process familiar to the reciever
 
 generally get this following best-practices; **standards**
 
-user has probably interacted with other packages before
+best-practices are familiar and capture **community inertia**
 
-packaging == SW manufacturing line
+easy; intuitive; painless recieving
+
+reciever has probably interacted with other packages before
 -->
 
 ---
@@ -566,7 +594,7 @@ def fetch_forecast(lat, lon):
     location = urllib3.request("GET", f"https://api.weather.gov/points/{lat},{lon}")
     forecast = urllib3.request("GET", location.json()["properties"]["forecast"])
     return [
-        "🌨️" if "snow" in (sF := period["shortForecast"].lower()) else 
+        "🌨️" if "snow" in (sF := period["shortForecast"].lower()) else
         "🌧️" if "rain" in sF else
         "☁️" if "cloud" in sF else
         "☀️"
@@ -592,7 +620,7 @@ def fetch_forecast(lat, lon):
     location = urllib3.request("GET", f"https://api.weather.gov/points/{lat},{lon}")
     forecast = urllib3.request("GET", location.json()["properties"]["forecast"])
     return [
-        "🌨️" if "snow" in (sF := period["shortForecast"].lower()) else 
+        "🌨️" if "snow" in (sF := period["shortForecast"].lower()) else
         "🌧️" if "rain" in sF else
         "☁️" if "cloud" in sF else
         "☀️"
@@ -607,8 +635,10 @@ if __name__ == "__main__":
 
 <div v-click.hide="1">
 
-- `urllib3==2.2.*`
-- `geopy==2.4.*`
+```
+urllib3==2.2.*
+geopy==2.4.*
+```
 
 </div>
 
@@ -621,6 +651,49 @@ if __name__ == "__main__":
     background-size: cover;
   }
 </style>
+
+<!--
+shift sharing strategy to be less burdensome to reciever
+
+now: 2 files & 2 install commands
+
+next: 1 file & 1 install
+
+best: 0 files & 0 install ????
+-->
+
+---
+layout: default
+---
+
+## Inline Metadata
+
+```text
+# /// script
+# requires-python = ">=3"
+# dependencies = [
+#   "some_dependency",
+# ]
+# ///
+```
+
+- Single-file executables
+- Tool agnostic packaging standard
+
+<style>
+  .slidev-page {
+    background-image: url("/images/cardboard.jpg");
+    background-size: cover;
+  }
+</style>
+
+<!--
+not a fantasy, reality
+
+puposly designed to support ONE file
+
+New standard: January 2024 (PEP-723)
+-->
 
 ---
 layout: default
@@ -640,34 +713,12 @@ def weather(session):
     session.run("metuirology.py", *session.posargs)
 ```
 
-<style>
-  .slidev-page {
-    background-image: url("/images/cardboard.jpg");
-    background-size: cover;
-  }
-</style>
+<br/>
 
-<!--
-not a fantasy, reality
--->
-
----
-layout: default
----
-
-## Inline Metadata
-
-```text
-# /// script
-# dependencies = [
-#   "some dependency",
-# ]
-# ///
+```bat
+$ uv run metuirology.py
 ```
 
-- Tool agnostic packaging standard
-- One file only
-
 <style>
   .slidev-page {
     background-image: url("/images/cardboard.jpg");
@@ -676,17 +727,13 @@ layout: default
 </style>
 
 <!--
-Very New standard: January 2024 (PEP-723)
-
 Not supported by all env runners. Not supported by old versions of supported runners
 
 Cannot install (pip), nor create a library for import ... or multi-file exe
 
 Simple, but not very extensible solution (yet)
 
-asking users to have specific `hatch` is 1 more share step
-
-here to tell you there is a better way
+asking recievers to have specific `hatch` is a hidden install step (with version checking decision point)
 -->
 
 ---
@@ -744,9 +791,9 @@ init signals to python that if it is ok to look at/inside this dir when resolvin
 
 ---
 layout: default
+transition: view-transition
 ---
 
-````md magic-move
 ```python
 # /// script
 # dependencies = ["urllib3==2.2.*", "geopy==2.4.*"]
@@ -762,7 +809,7 @@ def fetch_forecast(lat, lon):
     location = urllib3.request("GET", f"https://api.weather.gov/points/{lat},{lon}")
     forecast = urllib3.request("GET", location.json()["properties"]["forecast"])
     return [
-        "🌨️" if "snow" in (sF := period["shortForecast"].lower()) else 
+        "🌨️" if "snow" in (sF := period["shortForecast"].lower()) else
         "🌧️" if "rain" in sF else
         "☁️" if "cloud" in sF else
         "☀️"
@@ -774,35 +821,63 @@ if __name__ == "__main__":
     print("\t".join(fetch_forecast(*locate(sys.argv[1]))))
 ```
 
-```toml{1,5,8,9|1,5-7,9|1-4,9}
-📄 pyproject.toml
-   [build-system]
-   requires = ["hatchling"]
-   build-backend = "hatchling.build"
-   [project]
-   name = "metuirology"
-   version = "1"
-   dependencies = ["urllib3==2.2.*", "geopy==2.4.*"]
-📄 metuirology.py
-   import geopy.geocoders
-   import urllib3
+<style>
+  .slidev-page {
+    background-image: url("/images/cardboard.jpg");
+    background-size: cover;
+  }
+</style>
 
-   def locate(desc):
-       locator = geopy.geocoders.Nominatim(user_agent="metuirology").geocode(desc)
-       return locator.latitude, locator.longitude
+---
+layout: default
+---
 
-   def fetch_forecast(lat, lon):
-       location = urllib3.request("GET", f"https://api.weather.gov/points/{lat},{lon}")
-       forecast = urllib3.request("GET", location.json()["properties"]["forecast"])
-       return [
-           "🌨️" if "snow" in (sF := period["shortForecast"].lower()) else 
-           "🌧️" if "rain" in sF else
-           "☁️" if "cloud" in sF else
-           "☀️"
-           for period in forecast.json()["properties"]["periods"]
-       ]
+````md magic-move
+```toml
+# pyproject.toml
+[project]
+dependencies = ["urllib3==2.2.*", "geopy==2.4.*"]
+```
+
+```toml
+# pyproject.toml
+[project]
+name = "metuirology"
+version = "1"
+dependencies = ["urllib3==2.2.*", "geopy==2.4.*"]
+```
+
+```toml
+# pyproject.toml
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+[project]
+name = "metuirology"
+version = "1"
+dependencies = ["urllib3==2.2.*", "geopy==2.4.*"]
 ```
 ````
+
+```python
+import geopy.geocoders
+import urllib3
+
+def locate(desc):
+    locator = geopy.geocoders.Nominatim(user_agent="metuirology").geocode(desc)
+    return locator.latitude, locator.longitude
+
+def fetch_forecast(lat, lon):
+    location = urllib3.request("GET", f"https://api.weather.gov/points/{lat},{lon}")
+    forecast = urllib3.request("GET", location.json()["properties"]["forecast"])
+    return [
+        "🌨️" if "snow" in (sF := period["shortForecast"].lower()) else
+        "🌧️" if "rain" in sF else
+        "☁️" if "cloud" in sF else
+        "☀️"
+        for period in forecast.json()["properties"]["periods"]
+   ]
+```
 
 <style>
   .slidev-page {
@@ -813,6 +888,10 @@ if __name__ == "__main__":
 
 <!--
 build-system is a big choice you **must** make
+
+all build-systems are 3rd party to CPython
+
+secret: choice doesn't matter for pure-python
 
 does bring a lot of impact; just choose one that works
 -->
@@ -869,6 +948,8 @@ layout: default
 </style>
 
 <!--
+still just the script, but again 2 files! backwards!
+
 *more* steps to deliver same as script; so far
 
 1 pyproject defines 1 project -- not many
@@ -921,14 +1002,16 @@ layout: default
 <!--
 wheels open up possibilities
 
-PyPI is way to deliver 1/2 and have user deliver final mile
+... plug-in, gui
+
+PyPI is way to deliver 1/2 and have reciever deliver final mile
 -->
 
 ---
 layout: default
 ---
 
-## A wheel lets your user
+## A wheel lets the reciever
 
 - install how they want
 - track where a package came from and what it brought
@@ -946,7 +1029,7 @@ don't even have to know what installer is used
 
 work with any versions of tools older than one year
 
-standards give *you* and your *users* choice; interoperability
+standards give *you* and the *recievers* choice; interoperability
 
 re-share only involves last 2 share steps
 
@@ -983,7 +1066,7 @@ making the sharing strategy *Robust*
 
 any step you take out of the "install" instructions and put into the "packaging" process will save time multiplicitavely
 
-packaging *is* a burden, but one you can remove from users
+packaging *is* a burden, but one you can remove from recievers
 -->
 
 ---
