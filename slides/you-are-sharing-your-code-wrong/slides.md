@@ -18,10 +18,16 @@ class: text-center
 
 # You Are Sharing Your Code Wrong
 ## (and what to do about it)
+### Jeremiah Paige (he/him)
 
 <style>
   h2 {
     position: relative;
+    top: 35%;
+  }
+  h3 {
+    position: relative;
+    padding-top: 2rem;
     top: 35%;
   }
   .slidev-page {
@@ -794,6 +800,7 @@ layout: default
 transition: view-transition
 ---
 
+````md magic-move
 ```python
 # /// script
 # dependencies = ["urllib3==2.2.*", "geopy==2.4.*"]
@@ -820,6 +827,7 @@ if __name__ == "__main__":
     import sys
     print("\t".join(fetch_forecast(*locate(sys.argv[1]))))
 ```
+````
 
 <style>
   .slidev-page {
@@ -859,6 +867,7 @@ dependencies = ["urllib3==2.2.*", "geopy==2.4.*"]
 ```
 ````
 
+````md magic-move
 ```python
 import geopy.geocoders
 import urllib3
@@ -877,7 +886,12 @@ def fetch_forecast(lat, lon):
         "☀️"
         for period in forecast.json()["properties"]["periods"]
    ]
+
+if __name__ == "__main__":
+    import sys
+    print("\t".join(fetch_forecast(*locate(sys.argv[1]))))
 ```
+````
 
 <style>
   .slidev-page {
@@ -1014,8 +1028,9 @@ layout: default
 ## A wheel lets the reciever
 
 - install how they want
-- track where a package came from and what it brought
-- re-share without having to re-package
+- track where a package came from
+- know what other packages are required
+- re-share without having to re-wrap
 
 <style>
   .slidev-page {

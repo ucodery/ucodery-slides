@@ -3,6 +3,8 @@
   --slidev-code-font-family: ui-monospace, SFMono-Regular, Menlo, Monaco,
     Consolas, "Liberation Mono", "Courier New", monospace;
   --slidev-code-background: rgb(248 248 248 / 80%);
+  --slidev-code-font-size: 1.05rem;
+  --slidev-code-line-height: 1.15rem;
 }
 .slidev-layout h1 {
   color: #0a0a0a;
@@ -41,5 +43,5 @@
   background: rgba(242, 242, 242, 0.35);
 }
 .slidev-layout ul code {
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
