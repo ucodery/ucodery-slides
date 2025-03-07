@@ -51,3 +51,34 @@ some instances can create neither (what we typically call instances - instances 
 
 `type()` of everything is (eventually) type because `type()` answers the question "what class created this?"
 no builtin to ask direct parentage of a thing. But last on the list of every class's MRO is `object`
+
+## Extra
+classic: is-a, has-a
+wired: comes-from, made-from
+
+"typing" in the mypy sense, describes comes-from (inheritance)
+
+## Pseuto-Python answer
+
+```python
+# assume no special default bases
+class type:
+    # type methods here
+
+class object:
+    # object methods here
+
+type.__class__ = type
+type.__bases__ = (object,)
+object.__class__ = type
+object.__bases__ = (object,)
+```
+
+But this would de-sugar to
+```python
+# this is obviously impossible, so type is even more self-referential
+# right? well, not really...
+type = type('type', (), {})
+
+object = type('object', (), {})
+```

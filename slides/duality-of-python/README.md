@@ -1,4 +1,4 @@
-# What Came First: the Object Or Its Type?
+# The Duality of Python
 
 ## Summary
 

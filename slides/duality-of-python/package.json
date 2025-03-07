@@ -1,0 +1,16 @@
+{
+  "name": "duality-of-python",
+  "private": true,
+  "scripts": {
+    "build": "slidev build --out ../../dist/duality-of-python/ --base /duality-of-python/",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "author": "Jeremiah Paige",
+  "license": "CC-BY-NC-SA-4.0",
+  "homepage": "https://slides.ucodery.com/duality-of-python",
+  "dependencies": {
+    "@slidev/cli": "^0.50",
+    "duality-of-python": "file:"
+  }
+}
