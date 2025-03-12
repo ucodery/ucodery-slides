@@ -404,7 +404,7 @@ type.__mro__
 layout: default
 ---
 
-# What is the role of type?
+# What is the role of type
 - creates new classes
 - retrieves what class created some object
 
@@ -490,19 +490,56 @@ Cannot tell post-creation if `class` or `type()` was used
 
 ---
 
-# class
+# What is the role of class
 
 - collection of other objects contained in a series of hierarchical namespace
 - type craetes new classes
 - object that creates instances
 
+<!--
+- or created by class created by type
+- all classes are also instances
+
+> These objects normally act as factories for new instances of themselves [Data Model]
+-->
+
 ---
 
-# instance
+# What is the role of instance
 
 - collection of other objects contained in a series of hierarchical namespace
 - object's class is its type
 - object created by a class
+
+<!--
+specialized, in-line, for of sub-classing
+
+object == instance, type == class
+
+> A class instance is created by calling a class object [Data model]
+-->
+
+---
+
+# What is the role of instance
+
+- some crate classes
+- some create instances
+- most create neither classes nor instances
+
+<!--
+- these are typcially called metaclasses
+
+- classes, as they are simultaniously instances
+
+- this set of thing are what Python programmers typcially mean by an "instance"
+  - doesn't allow for further specialization
+
+- some other's are callable but not factories
+
+so, by the definitions at the start, everything in Python is an instance
+everything has a class (but only some are a class)
+-->
 
 ---
 layout: quote
@@ -522,6 +559,14 @@ layout: quote
 ---
 layout: intro
 class: text-center
+transition: view-transition
+---
+
+# What came first, the object or the type?
+
+---
+layout: intro
+class: text-center
 ---
 
 # What came first, the class or the instance?
@@ -534,50 +579,6 @@ But I am here to talk about Duality
 Pythonistas typically think of classes coming first, and instances following, coming from classes
 
 Actually, the opposite is true
--->
-
----
-layout: default
----
-
-# What is the role of class
-
-- called to create an instance
-- classes are created by instances
-- `type` is the first instance that can create classes
-
-<!--
-- the created object's type is the creating class
-
-- or created by class created by type
-- all classes are also intances
-
-> These objects normally act as factories for new instances of themselves [Data Model]
--->
-
----
-layout: default
----
-
-# What is the role of instance
-
-- some crate classes
-- some create instances
-- most create neither classes nor instances
-
-<!--
-- these are typcially called metaclasses
-
-- classes, as they are simultaniously instances
-
-- this set of thing are what Python programmers typcially mean by an "instance"
-
-object == instance, type == class
-
-so, by the definitions at the start, everything in Python is an instance
-everything has a class (but only some are a class)
-
-> A class instance is created by calling a class object [Data model]
 -->
 
 ---
@@ -606,21 +607,15 @@ layout: two-cols
 
 <!--
 type of, made-by `type`
--->
 
----
-layout: intro
-class: text-center
----
+type is a metaclass
 
-# What came first, `object` or `type`?
-
-<!--
-what came first, the instance or the class?
+object is a class class
 -->
 
 ---
 layout: default
+class:
 ---
 
 <h1>An An<img src="/images/c-logo.svg" style="display:inline; vertical-align: bottom; height: 1.1em;">wer</h1>
