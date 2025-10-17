@@ -1,0 +1,15 @@
+{
+  "name": "tuples",
+  "private": true,
+  "scripts": {
+    "build": "slidev build --out ../../dist/tuples/ --base /tuples/",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "author": "Jeremiah Paige",
+  "license": "CC-BY-NC-SA-4.0",
+  "homepage": "https://slides.ucodery.com/tuples",
+  "dependencies": {
+    "@slidev/cli": "^0.50"
+  }
+}
