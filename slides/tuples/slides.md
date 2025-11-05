@@ -266,6 +266,8 @@ layout: center
   - for the human
 
 <!--
+can create them wherever an expression is valid
+
 some parens are load-bearing, some are just a facade-but neither are part of the tuple definition
 -->
 
