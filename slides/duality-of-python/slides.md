@@ -77,6 +77,9 @@ assert isinstance(None, object)
 assert isinstance(__builtins__, object)
 ```
 ```python
+assert isinstance(asyncio.sleep(0.1), object)
+```
+```python
 thing = compile("import this", "<example>", "exec")
 # <code object <module> at 0x1032fe090, file "<example>", line 1>
 assert isinstance(thing, object)
@@ -107,6 +110,7 @@ assert isinstance(thing, object)
 
 - constants
 - namespaces
+- unawaited coroutines
 - code
 - pointers
 
@@ -486,6 +490,8 @@ type(NewNil) is NewNil.__class__
 
 <!--
 Cannot tell post-creation if `class` or `type()` was used
+
+type and class are total synonyms
 -->
 
 ---
@@ -515,6 +521,8 @@ Cannot tell post-creation if `class` or `type()` was used
 specialized, in-line, for of sub-classing
 
 object == instance, type == class
+
+type is its own class; also its own instance
 
 > A class instance is created by calling a class object [Data model]
 -->
@@ -578,7 +586,7 @@ But I am here to talk about Duality
 
 Pythonistas typically think of classes coming first, and instances following, coming from classes
 
-Actually, the opposite is true
+Actually, class and instance are not either/ or. Instances are a superset of Classes
 -->
 
 ---
@@ -717,15 +725,19 @@ layout: quote
 <!--
 I think I was asking the wrong question.
 
+a seeming contradiction was an incorrect framing
+
 Mental flexibility; Paradoxes; bootstrap;
 
 Python is interpreted and compiled
 
-programs are data and instrutions
+programs are data and instructions
 
 classes and instances aren't either or
 
 Python3 or Python2 code?
+
+**Leave here and learn about the deep magic of your language but make sure to ask the right questions**
 -->
 
 ---
